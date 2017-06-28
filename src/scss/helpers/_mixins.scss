@@ -1,0 +1,40 @@
+@mixin droid(){
+	font-family: 'Droid Serif', serif;
+}
+
+@mixin raleway(){
+	font-family: 'Raleway', sans-serif;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin transition($transition){
+	-moz-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin shadow($params){
+	-webkit-box-shadow: $params;
+	-moz-box-shadow: $params;
+	box-shadow: $params;
+}
+
+@mixin background-cover($url){
+	background-image:url($url);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
