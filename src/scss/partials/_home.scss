@@ -1,0 +1,142 @@
+.home{
+
+	&__path{
+
+		h2{
+			@include raleway();
+			font-size:42px;
+			color:$dark-blue;
+		}
+
+		h3{
+			@include droid();
+			font-size:18px;
+			color:$dark-gray;
+			font-style:italic;
+			line-height:26px;
+		}
+
+		p{
+			@include droid();
+			font-size:18px;
+			color:$dark-gray;
+			line-height:26px;
+		}
+
+		padding:40px 0px;
+
+		h2,h3,p{
+			text-align:center;
+			max-width:640px;
+			margin:30px auto;
+		}
+
+		&__steps{
+			margin-top:50px;
+			position:relative;
+			@include clear();
+			display: block;
+
+			.step{
+				background-color:$light-gray;
+				display: block;
+				float:left;
+				width:31%;
+				margin:0 1%;
+				padding:30px;
+				box-sizing:border-box;
+				text-align:center;
+
+				.icon{
+					position:relative;
+					display: block;
+					margin:auto;
+					width:25%;
+					padding-bottom:25%;
+					background:#333;
+				}
+
+				h2{
+					font-size:28px;
+					max-width:280px;
+				}
+
+				p{
+					display: block;
+					position:relative;
+				}
+
+				p:last-of-type{
+
+					padding-bottom:30px;
+
+					&:after{
+						content:'';
+						display: block;
+						position:absolute;
+						width:30px;
+						height:2px;
+						background-color:$dark-gray;
+						position:absolute;
+						left:50%;
+						bottom:0px;
+						@include transform(translateX(-50%));
+					}
+				}
+
+				a.read_more{
+					text-transform: uppercase;
+					text-decoration:none;
+					@include raleway();
+					padding:10px 20px;
+					display: inline-block;
+					margin:auto;
+					font-size:16px;
+					color:$dark-blue;
+					font-weight:bold;
+					border:2px solid $dark-blue;
+					@include transition(all .3s linear);
+
+					&:hover{
+						background-color:$dark-blue;
+						color:$white;
+					}
+				}
+			}
+		}
+	}
+
+	&__stats{
+		margin:40px 0px;
+
+		.container{
+			max-width:940px;
+			@include clear();
+		}
+		
+		.stat{
+			width:33%;
+			float:left;
+			text-align:center;
+
+			span{
+				display: block;
+				@include droid();
+				color:$dark-blue;
+
+				&.count{
+					font-size:32px;
+				}
+
+				&.label{
+					font-size:20px;
+				}
+			}
+
+			&:nth-child(2){
+				border-left:2px solid $dark-gray;
+				border-right:2px solid $dark-gray;
+			}
+		}
+	}
+}

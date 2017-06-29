@@ -38,3 +38,11 @@
 	background-size:cover;
 }
 
+@mixin clear(){
+	&:after{
+		display:block;
+		content:'';
+		clear:both;
+	}
+}
+
