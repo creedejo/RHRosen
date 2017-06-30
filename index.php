@@ -9,19 +9,19 @@
 
 		<div class="home__path__steps">
 			<div class="step">
-				<div class="icon"></div>
+				<div class="icon eye"></div>
 				<h2>Seeing All Your Opportunities</h2>
-				<p>We have a proven way of helping you to see your best opportunities – reframing your views so you can see where you really are. </p>
+				<p>We have a proven way of helping you to see your best opportunities – reframing your views so you can see where you <b>really</b> are. </p>
 				<a href="#" class="read_more">Read More</a>
 			</div>
 			<div class="step">
-				<div class="icon"></div>
+				<div class="icon check"></div>
 				<h2>Setting the Right Priorities</h2>
-				<p>We’ll help you focus on things that really make a difference, so you don’t waste time on unimportant issues or theoretical thinking.</p>
+				<p>We’ll help you focus on things that <b>really</b> make a difference, so you don’t waste time on unimportant issues or theoretical thinking.</p>
 				<a href="#" class="read_more">Read More</a>
 			</div>
 			<div class="step">
-				<div class="icon"></div>
+				<div class="icon chart"></div>
 				<h2>Making Progress Now</h2>
 				<p>We’ll help you choose the right path, so you can begin making progress right away – this week, this month, this year. </p>
 				<a href="#" class="read_more">Read More</a>
@@ -46,6 +46,10 @@
 			<span class="label">Transactions</span>	
 		</div>
 	</div>
+</section>
+
+<section class="home__quotes">
+
 </section>
 
 <?php get_footer(); ?>

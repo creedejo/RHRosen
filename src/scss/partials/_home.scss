@@ -43,7 +43,7 @@
 				float:left;
 				width:31%;
 				margin:0 1%;
-				padding:30px;
+				padding: 20px 30px 40px;
 				box-sizing:border-box;
 				text-align:center;
 
@@ -51,9 +51,19 @@
 					position:relative;
 					display: block;
 					margin:auto;
-					width:25%;
-					padding-bottom:25%;
-					background:#333;
+					width:35%;
+					padding-bottom:35%;
+					background-image:url('../images/icons_path.png');
+					background-size:300%;
+
+					&+h2{
+						margin-top:10px;
+						margin-bottom:10px;
+					}
+
+					&.eye{background-position:0px 0px;}
+					&.check{background-position:-100% 0px;}
+					&.chart{background-position:-200% 0px;}
 				}
 
 				h2{
@@ -62,6 +72,7 @@
 				}
 
 				p{
+					@include raleway();
 					display: block;
 					position:relative;
 				}
@@ -138,5 +149,10 @@
 				border-right:2px solid $dark-gray;
 			}
 		}
+	}
+
+	&__quotes{
+		background-color:#333;
+		height:400px;
 	}
 }

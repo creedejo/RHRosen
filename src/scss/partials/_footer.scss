@@ -1,0 +1,253 @@
+.footer{
+	&__inquiry{
+		position:relative;
+		//height:140px;
+		@include background-cover('../images/bg_inquiry.jpg');
+		background-position:center center;
+
+		.overlay_color{
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			background-color: $dark-blue;
+			opacity:.8;
+		}
+
+		.container{
+			@include clear();
+			padding:30px 0px;
+		}
+
+		&__content{
+			display: block;
+			float:left;
+			width:75%;
+			font-size:26px;
+			@include raleway();
+			color:$white;
+
+			p{
+				font-weight:400;
+			}
+		}
+
+		&__button{
+			display: block;
+			float:left;
+			width:25%;
+			padding-top: 30px;
+
+			a{
+			    padding: 12px 24px;
+			    border:1px solid $white;
+			    @include raleway();
+			    color:$white;
+			    text-transform:uppercase;
+			    text-decoration:none;
+			    font-weight:700;
+			    @include transition(all .3s linear);
+
+			    &:hover{
+			    	background-color:$white;
+			    	color:$dark-blue;
+			    }
+			}
+		}
+	}
+
+	&__links{
+		background-color:$footer-gray;
+		border-bottom:1px solid $light-gray;
+
+		.container{
+			padding:30px 0px;
+			@include clear();
+		}
+
+		&__col{
+			float:left;
+			width:27%;
+			box-sizing:border-box;
+			padding-left:15px;
+			padding-right:15px;
+
+			&:first-child{
+				width: 25%;
+			}
+			&:nth-child(2){
+				width:20%;
+			}
+		}
+
+		h3{
+			font-weight:500;
+			color:$white;
+			@include raleway();
+			font-size:16px;
+			line-height:20px;
+			letter-spacing: 1px;
+		}
+
+		p,ul li,ul li a{
+			color:$white;
+			@include raleway();
+			font-weight: 300;
+			line-height:22px;
+			font-size:14px;
+		}
+
+		ul{
+			margin:0px;
+			padding:0px;
+			list-style-type: none;
+			li{
+				padding-bottom:10px;
+				a{
+					text-decoration: none;
+
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+			}
+
+			&.arrow{
+				li a{
+					display: inline-block;
+					padding-left:26px;
+					position:relative;
+
+					&:before{
+						font-family:"ElusiveIcons";
+						content:'\f10c';
+						position:absolute;
+						left:0px;
+					}
+				}
+			}
+		}
+
+		&__form{
+			position:relative;
+			margin-top:30px;
+
+			form{
+				vertical-align: top;
+				position:relative;
+
+				input,button{
+					outline: none;
+				}
+			}
+
+			input[type='email']{
+				background-color:$footer-gray;
+				border:1px solid $white;
+				@include raleway();
+				font-style: italic;
+				font-size:14px;
+				padding:10px 40px 10px 20px;
+				width:250px;
+				box-sizing:border-box;
+				color:$white;
+			}
+
+			button{
+				display: inline-block;
+				position:relative;
+				width:38px;
+				height:36px;
+				color:$white;
+				background-color:$dark-blue;
+				border:none;
+				margin-left: -43px;
+				top: 0px;
+				font-size:14px;
+				cursor: pointer;
+				@include transition(all .3s linear);
+
+			    &:hover{
+			    	background-color:$white;
+			    	color:$dark-blue;
+			    }
+			}
+		}
+	}
+
+	&__nav{
+		background:$footer-gray;
+		position:relative;
+		@include clear();
+		box-sizing:border-box;
+		padding:60px 0px;
+		@include raleway();
+		color:$white;
+		font-size:12px;
+
+		ul{
+			margin:0px;
+			padding:0px;
+			list-style-type: none;
+			text-align: center;
+
+			li{
+				display: inline-block;
+			}
+		}
+
+		ul.links{
+
+			li{
+				padding:0px 12px;
+				border-right:1px solid $white;
+
+				&:last-child{
+					border-right:none;
+				}
+
+				a{
+					color:$white;
+					text-decoration: none;
+					text-transform: uppercase;
+
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+			}
+		}
+
+		ul.icons{
+			margin-right:30px;
+			li{
+
+				margin:-20px 4px 0px;
+
+				a{
+					color:$white;
+					background:$dark-gray;
+					padding:5px 8px;
+					font-size:20px;
+					@include transition(all .3s linear);
+
+				    &:hover{
+				    	background-color:$white;
+				    	color:$dark-blue;
+				    }
+				}
+			}
+		}
+
+		&__col{
+			position:relative;
+			width:25%;
+			float:left;
+
+			&:nth-child(2){
+				width:50%;
+			}
+		}
+	}
+}
