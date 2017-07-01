@@ -47,8 +47,8 @@
 		<div class="footer__links__col">
 			<h3>Recent Blog Posts:</h3>
 			<ul class="arrow">
-				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
-				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
+				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
+				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
 			</ul>
 		</div>
 	</div>
@@ -80,7 +80,8 @@
 
 </div> <!-- END PAGE CONTAINER -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script src="<?php bloginfo('template_directory') ?>/assets/js/main.min.js"></script>
+<?php wp_footer(); ?>
 </body>
 </html>

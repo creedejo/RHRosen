@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/elusive-icons.min.css'; ?>">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:100,300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/main.css'; ?>">
+	
+	<?php wp_head(); ?>
 </head>
 
 <body class="<?php echo $pagename; ?>">

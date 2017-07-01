@@ -1,5 +1,10 @@
 <?php get_header(); ?>
-<div class="carousel"></div>
+
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+<div class="carousel">
+	<?php putRevSlider( 'test' ); ?>
+</div>
 
 <section class="home__path">
 	<div class="container">
@@ -51,5 +56,8 @@
 <section class="home__quotes">
 
 </section>
+
+<?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
