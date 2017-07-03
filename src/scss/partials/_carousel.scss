@@ -22,12 +22,67 @@
 	}
 }
 
-.tp-rightarrow.custom{
-	height: 60px;
-	width: 60px;
+.custom.tparrows{
+	height: 60px !important;
+	width: 80px !important;
 	text-align: center;
 	background-color: transparent !important;
-	font-size:0px;
-	line-height:0px;
+
+	&:before{
+		position:absolute;
+	    content:'' !important;
+	    height: 60px;
+	    width: 30px;
+	    background-color: $dark-blue;
+	    @include transition(all 300ms linear 0ms);
+	}
+
+	&:after{
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    height: 60px;
+	    width: 60px;
+	    position: absolute;
+	    top: 0;
+	    content: "" !important;
+	    z-index: 0;
+	}
+
+	&:hover{
+		&:before{
+			width:60px;
+		}
+	}
+
 }
+
+.tp-leftarrow.custom{
+
+	&:before{
+		left:0px;
+	}
+
+	&:after{
+		background-image: url('../images/carousel_arrow_left.png');
+		left:0px;
+	}
+}
+
+.tp-rightarrow.custom{
+
+	&:before{
+		right:0px;
+	}
+
+	&:after{
+		background-image: url('../images/carousel_arrow_right.png');
+		right:0px;
+	}
+}
+
+
+
+
+
+
 

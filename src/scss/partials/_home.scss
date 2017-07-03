@@ -121,7 +121,7 @@
 		margin:40px 0px;
 
 		.container{
-			max-width:940px;
+			max-width:1024px;
 			@include clear();
 		}
 		
@@ -136,11 +136,11 @@
 				color:$dark-blue;
 
 				&.count{
-					font-size:32px;
+					font-size:42px;
 				}
 
 				&.label{
-					font-size:20px;
+					font-size:24px;
 				}
 			}
 
