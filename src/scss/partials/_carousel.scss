@@ -5,3 +5,29 @@
 	background:#333;
 	position:relative;
 }
+
+.tp-bullets.custom{
+	width:220px !important;
+	margin-bottom:20px;
+
+	.tp-bullet{
+		width:60px;
+		height:8px;
+		background:$carousel-gray;
+		@include border-radius(4px);
+
+		&.selected{
+			background:$white;
+		}
+	}
+}
+
+.tp-rightarrow.custom{
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	background-color: transparent !important;
+	font-size:0px;
+	line-height:0px;
+}
+
