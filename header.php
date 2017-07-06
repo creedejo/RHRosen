@@ -16,8 +16,11 @@
 
 <div class="header">
 	<div class="container">
-		<div class="logo">
-		<img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr.png">
+		<div class="logo logo__white">
+			<img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr.png">
+		</div>
+		<div class="logo logo__blue">
+			<img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr_blue.png">
 		</div>
 		<nav>
 			<div class="nav__links">

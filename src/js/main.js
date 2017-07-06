@@ -1,5 +1,6 @@
 (function($) {
 	var $counter = $("#stats .container");
+	$page = $(".page_container");
 	$(document).ready(function(){
 		
 		/* TRIGGER STATS COUNtEr */
@@ -11,6 +12,27 @@
 		  },
 		  context: '.page_container',
 		  offset: '150%'
+		});
+
+		/* UPDATE HEADER ON SCROLL */
+		var $top = $page.scrollTop();
+		var $body = $('body');
+		if($top>=20){
+			$body.addClass('scrolled');
+		}
+
+		$page.scroll(function(){
+
+			$top = $page.scrollTop();
+			//$body = $('body');
+
+			if($top>=20 && !$body.hasClass('scrolled')){
+				$body.addClass('scrolled');
+			}
+			else if($top<20 && $body.hasClass('scrolled')){
+				$body.removeClass('scrolled');
+			}
+
 		});
 	});
 

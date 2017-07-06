@@ -152,7 +152,58 @@
 	}
 
 	&__quotes{
-		background-color:#333;
+		background-color:$light-gray;
 		height:400px;
+
+		&__bg{
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:100%;
+			height:100%;
+			&:before,&:after{
+				position:absolute;
+				left:50%;
+				@include transform(translate(-50%, -50%));
+				font-family: 'ElusiveIcons';
+			}
+
+			&:before{
+				content:'\f1d4';
+				color:$white;
+				font-size:220px;
+				top:50%;
+			}
+
+			&:after{
+				content:'\f1d5';
+				color:$gray;
+				font-size: 72px;
+				top: 24%;
+			}
+		}
+
+		.container{
+			position:relative;
+			height:100%;
+		}
+
+		.tp-bullets.custom{
+			width:220px !important;
+			margin-bottom:20px;
+
+				.tp-bullet{
+					width:60px;
+					height:8px;
+					background:$carousel-gray;
+					@include border-radius(4px);
+
+					&.selected{
+						background:$dark-blue !important;
+					}
+				}
+			}
 	}
+
+	
 }

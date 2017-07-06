@@ -10,6 +10,42 @@ body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	//background-color:#ccc;
+
+	&.scrolled{
+		.header{
+			height:60px;
+			background-color:$white;
+			border-bottom-color:$gray;
+
+			nav ul li a{
+				color:$dark-gray;
+
+				&:hover{
+					color:$dark-blue;
+				}
+			}
+
+			nav .nav__links a{
+				color:$dark-gray;
+
+				&:hover{
+					color:$dark-blue;
+				}
+			}
+
+			nav .nav__icons__media{
+				border-left-color:$gray;
+			}
+
+			.logo__white{
+				opacity:0;
+			}
+
+			.logo__blue{
+				opacity:1;
+			}
+		}
+	}
 }
 
 .page_container{

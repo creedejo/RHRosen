@@ -54,7 +54,10 @@
 </section>
 
 <section class="home__quotes">
-
+	<div class="container">
+	<div class="home__quotes__bg"></div>
+	<?php putRevSlider( 'quotes' ); ?>
+	</div>
 </section>
 
 <?php endwhile; ?>
