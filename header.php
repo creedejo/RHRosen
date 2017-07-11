@@ -46,8 +46,14 @@
 					<li><a href="#"><i class="el el-wordpress"></i></a></li>
 				</ul>
 			</div>
-			
 		</nav>
+		<div class="nav-toggle">
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 </div>
 

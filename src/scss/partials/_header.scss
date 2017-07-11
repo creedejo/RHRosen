@@ -8,6 +8,11 @@
 	z-index:999;
 	@include transition(all .3s linear);
 
+	@media screen and (max-width:$nav-break){
+		height:60px;
+		background-color:rgba(0,0,0,.8);
+	}
+
 	.container{
 		height:100%;
 		width:100%;
@@ -28,6 +33,11 @@
 			margin-top: 2px;
 		}
 
+		@media screen and (max-width:$nav-break){
+			max-width:60%;
+			}
+
+
 		img{
 			width:100%;
 		}
@@ -41,12 +51,91 @@
 		}
 	}
 
+	.nav-toggle{
+		position:absolute;
+		width:30px;
+		height:30px;
+		right:18px;
+		top:18px;
+		cursor: pointer;
+
+		.hamburger{
+			@include transform(rotate(0deg));
+			@include transition(.5s ease-in-out);
+			width:30px;
+			height:30px;
+			span{
+				display: block;
+				position: absolute;
+				height: 4px;
+				width: 100%;
+				background: $dark-gray;
+				opacity: 1;
+				left: 0;
+				@include transform(rotate(0deg));
+				@include transition(.25s ease-in-out);
+
+				&:nth-child(1) {
+				  top: 0px;
+				}
+
+				&:nth-child(2),#nav-icon3 span:nth-child(3) {
+				  top: 9px;
+				}
+
+				&:nth-child(3) {
+				  top: 18px;
+				}
+			}
+
+			&.nav-open{
+				span{
+					&:nth-child(1) {
+					  @include transform(rotate(45deg));
+					  top:10px;
+					}
+
+					&:nth-child(2) {
+					  left:-10px;
+					  opacity:0;
+					}
+
+					&:nth-child(3) {
+					  @include transform(rotate(-45deg));
+					  top:10px;
+					}
+
+				}
+			}
+		}
+	}
+
 	nav{
 		position:relative;
 		float:right;
 		height:100%;
 		text-align:right;
 		margin-right:10px;
+		@include transition(right .3s linear);
+
+		@media screen and (max-width:$nav-break){
+			position:fixed;
+			height:auto;
+			right:-100%;
+			top:61px;
+			margin-right:0px;
+		    background-color: rgba(0, 0, 0, 0.7);
+		    width:80%;
+		    max-width:400px;
+		    text-align:left;
+		}
+
+		&.nav-open{
+			@media screen and (max-width:$nav-break){
+				right:0px;
+			}
+		}
+
 
 		ul{
 			margin:0px;
@@ -55,8 +144,18 @@
 			position:relative;
 			@include transform(translateY(-50%));
 
+			@media screen and (max-width:$nav-break){
+				@include transform(translateY(0%));
+				width:100%;
+			}
+
 			li{
 				display: inline-block;
+
+				@media screen and (max-width:$nav-break){
+					display: block;
+					border-bottom:1px solid $black;
+				}
 
 				a{
 					color:$white;
@@ -67,6 +166,14 @@
 					@media screen and (max-width:$large){
 						margin-right:18px;
 					}
+
+					@media screen and (max-width:$nav-break){
+						margin-right:0px;
+
+						&:hover{
+					    	 background-color: $black;
+					    }
+					}
 				}
 			}
 		}
@@ -75,6 +182,10 @@
 			display: block;
 			height: 100%;
 			float: left;
+
+			@media screen and (max-width:$nav-break){
+				float:none;
+			}
 		}
 
 		.nav{
@@ -99,9 +210,24 @@
 
 					&:hover:after{
 						width:100%;
+
+						@media screen and (max-width:$nav-break){
+							width:0px;
+						}
+					}
+
+					@media screen and (max-width:$nav-break){
+						padding:20px 12px 20px 20px;
+						display: block;
 					}
 				}
+				
+
 				margin-right:10px;
+
+				@media screen and (max-width:$nav-break){
+					margin-right: 0px;
+				}
 			}
 			&__icons{
 				&__search,&__media{
@@ -121,13 +247,17 @@
 					}
 
 					@media screen and (max-width:$nav-break){
-						//display: none;
+						display: none;
 					}
 				}
 
 				&__media{
 					padding-left:24px;
 					border-left:1px solid $white;
+				}
+
+				@media screen and (max-width:$nav-break){
+					display: none;
 				}
 			}
 		}

@@ -12,46 +12,48 @@ body{
 	//background-color:#ccc;
 
 	&.scrolled{
-		.header{
-			height:60px;
-			background-color:$white;
-			border-bottom-color:$gray;
+		@media screen and (min-width:1081px){
+			.header{
+				height:60px;
+				background-color:$white;
+				border-bottom-color:$gray;
 
-			nav ul li a{
-				color:$dark-gray;
+				nav ul li a{
+					color:$dark-gray;
 
-				&:hover{
-					color:$dark-blue;
-				}
-			}
-
-			nav .nav__links a{
-				color:$dark-gray;
-
-				&:hover{
-					color:$dark-blue;
-					&:after{
-						background-color:$dark-blue;
+					&:hover{
+						color:$dark-blue;
 					}
 				}
-			}
 
-			nav .nav__icons__media{
-				border-left-color:$gray;
+				nav .nav__links a{
+					color:$dark-gray;
 
-			}
+					&:hover{
+						color:$dark-blue;
+						&:after{
+							background-color:$dark-blue;
+						}
+					}
+				}
 
-			nav .nav__icons__media a, nav .nav__icons__search a{
-				font-size:16px;
-				margin-right:20px;
-			}
+				nav .nav__icons__media{
+					border-left-color:$gray;
 
-			.logo__white{
-				opacity:0;
-			}
+				}
 
-			.logo__blue{
-				opacity:1;
+				nav .nav__icons__media a, nav .nav__icons__search a{
+					font-size:16px;
+					margin-right:20px;
+				}
+
+				.logo__white{
+					opacity:0;
+				}
+
+				.logo__blue{
+					opacity:1;
+				}
 			}
 		}
 	}
@@ -65,6 +67,10 @@ body{
 	width:100%;
 	height:100%;
 	overflow-y:auto;
+
+	&.nav-open{
+		//overflow:hidden;
+	}
 }
 
 .container{

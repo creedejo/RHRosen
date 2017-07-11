@@ -1,9 +1,11 @@
 (function($) {
 	var $counter = $("#stats .container");
 	$page = $(".page_container");
+	$body = $("body");
+
 	$(document).ready(function(){
 		
-		/* TRIGGER STATS COUNtEr */
+		/* TRIGGER STATS COUNTER */
 		var waypoints = $('#stats').waypoint({
 		  handler: function() {
 		    if(!$counter.hasClass('counting')){
@@ -33,6 +35,13 @@
 				$body.removeClass('scrolled');
 			}
 
+		});
+
+		$(".nav-toggle").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+
+			$(".hamburger,nav,.page_container").toggleClass("nav-open");
 		});
 	});
 
