@@ -28,8 +28,29 @@
 			@include raleway();
 			color:$white;
 
+			@media screen and (max-width:$large){
+				font-size:22px;
+			}
+
+			@media screen and (max-width:$sub-portrait){
+				width:70%;
+			}
+
+			@media screen and (max-width:$mobile){
+				width:90%;
+				float:none;
+				margin:auto;
+				text-align:center;
+			}
+
 			p{
 				font-weight:400;
+				line-height:32px;
+
+				@media screen and (max-width:$mobile){
+					font-size:24px;
+					line-height:28px;
+				}
 			}
 		}
 
@@ -38,6 +59,24 @@
 			float:left;
 			width:25%;
 			padding-top: 30px;
+
+
+			@media screen and (max-width:$large){
+				margin-left:2%;
+				width:23%;
+			}
+
+			@media screen and (max-width:$sub-portrait){
+				margin-left:2%;
+				width:28%;
+			}
+
+			@media screen and (max-width:$mobile){
+				width:90%;
+				float:none;
+				margin:auto auto 30px auto;
+				text-align:center;
+			}
 
 			a{
 			    padding: 12px 24px;
@@ -75,10 +114,35 @@
 
 			&:first-child{
 				width: 25%;
+				@media screen and (max-width:$nav-break){
+					width:40%;
+					margin-right:3%;
+				}
+				@media screen and (max-width:$mobile){
+					width:80%;
+				}
 			}
 			&:nth-child(2){
 				width:20%;
+				@media screen and (max-width:$nav-break){
+					width:40%;
+				}
+
+				@media screen and (max-width:$mobile){
+					width:80%;
+				}
 			}
+
+			@media screen and (max-width:$nav-break){
+				width:40%;
+				margin-bottom:40px;
+			}
+
+			@media screen and (max-width:$mobile){
+				width:80%;
+				margin-bottom:10px;
+			}
+
 		}
 
 		h3{
@@ -88,6 +152,8 @@
 			font-size:16px;
 			line-height:20px;
 			letter-spacing: 1px;
+
+			
 		}
 
 		p,ul li,ul li a{
@@ -96,6 +162,8 @@
 			font-weight: 300;
 			line-height:22px;
 			font-size:14px;
+
+			
 		}
 
 		ul{
@@ -132,6 +200,7 @@
 		&__form{
 			position:relative;
 			margin-top:30px;
+			box-sizing:border-box;
 
 			form{
 				vertical-align: top;
@@ -160,6 +229,18 @@
 					border:1px solid $dark-blue;
 					color:$dark-gray;
 				}
+
+				@media screen and (max-width:$large){
+					width:230px;
+					padding:10px 40px 10px 10px;
+					font-size:12px;
+				}
+
+				@media screen and (max-width:$nav-break){
+					width:90%;
+					padding:10px 40px 10px 10px;
+				}
+
 			}
 
 			button{
@@ -180,6 +261,11 @@
 			    	background-color:$white;
 			    	color:$dark-blue;
 			    }
+
+			    @media screen and (max-width:$large){
+					height:34px;
+					top:1px;
+				}
 			}
 		}
 	}

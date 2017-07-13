@@ -58,6 +58,11 @@
 		right:18px;
 		top:18px;
 		cursor: pointer;
+		display: none;
+
+		@media screen and (max-width:$nav-break){
+			display: block;
+		}
 
 		.hamburger{
 			@include transform(rotate(0deg));
