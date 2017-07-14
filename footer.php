@@ -7,7 +7,7 @@
 			<p>Let us help you build this year’s profits <b>and</b> build a path to the future.</p>
 		</div>
 		<div class="footer__inquiry__button">
-			<a href="#">Let's Talk</a>
+			<a href="#" class="inquiry-link">Let's Talk</a>
 		</div>
 	</div>
 </section>
@@ -77,6 +77,20 @@
 
 </footer>
 
+<div class="inquiry">
+	<div class="handle"></div>
+	<div class="container">
+		<form>
+		<h3>Let's Talk</h3>
+		<input type="text" placeholder="Name">
+		<input type="email" placeholder="E-mail Address">
+		<input type="text" placeholder="Phone">
+		<input type="text" placeholder="Subject">
+		<textarea placeholder="Message..."></textarea>
+		<button type="submit">Send Message</button>
+		</form>
+	</div>
+</div>
 
 </div> <!-- END PAGE CONTAINER -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

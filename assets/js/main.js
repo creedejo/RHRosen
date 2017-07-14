@@ -2,7 +2,7 @@
 	var $counter = $("#stats .container");
 	$page = $(".page_container");
 	$body = $("body");
-
+	$inquiry = $(".inquiry");
 	$(document).ready(function(){
 		
 		/* TRIGGER STATS COUNTER */
@@ -42,6 +42,18 @@
 			e.stopPropagation();
 
 			$(".hamburger,nav,.page_container").toggleClass("nav-open");
+		});
+
+		$inquiry.find(".handle").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$inquiry.toggleClass("open");
+		});
+
+		$(".inquiry-link").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			openInquiry();
 		});
 	});
 
@@ -84,4 +96,17 @@
 	function numberWithCommas(x) {
 	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
+
+	function openInquiry(){
+		if(!$inquiry.hasClass("open")){
+			$inquiry.addClass("open");
+		}
+	}
+
+	function closeInquiry(){
+		if($inquiry.hasClass("open")){
+			$inquiry.removeClass("open");
+		}
+	}
+
 }(jQuery));

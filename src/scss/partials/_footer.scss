@@ -139,7 +139,7 @@
 			}
 
 			@media screen and (max-width:$mobile){
-				width:80%;
+				width:100%;
 				margin-bottom:10px;
 			}
 
@@ -267,6 +267,11 @@
 					top:1px;
 				}
 			}
+
+			@media screen and (max-width:$mobile){
+				margin-bottom:20px;
+				max-width:300px;
+			}
 		}
 	}
 
@@ -279,6 +284,10 @@
 		@include raleway();
 		color:$white;
 		font-size:12px;
+
+		@media screen and (max-width:$sub-landscape){
+			padding:30px 0px;
+		}
 
 		ul{
 			margin:0px;
@@ -296,6 +305,13 @@
 			li{
 				padding:0px 12px;
 				border-right:1px solid $white;
+
+				@media screen and (max-width:$phone){
+					border-right:none;
+					display: block;
+					text-align:center;
+					margin-bottom:10px;
+				}
 
 				&:last-child{
 					border-right:none;
@@ -319,6 +335,10 @@
 
 				margin:-20px 4px 0px;
 
+				@media screen and (max-width:$sub-landscape){
+					margin:10px 4px;
+				}
+
 				a{
 					color:$white;
 					background:$dark-gray;
@@ -341,6 +361,17 @@
 
 			&:nth-child(2){
 				width:50%;
+
+				@media screen and (max-width:$sub-landscape){
+					width:100%;
+				}
+			}
+
+			@media screen and (max-width:$sub-landscape){
+				float:none;
+				width:90%;
+				margin:20px auto;
+				text-align:center;
 			}
 		}
 	}

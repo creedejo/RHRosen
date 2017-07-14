@@ -35,7 +35,7 @@
 			<div class="nav__icons__search">
 				<ul>
 					<li><a href="#"><i class="el el-search"></i></a></li>
-					<li><a href="#"><i class="el el-comment"></i></a></li>
+					<li><a href="#" class="inquiry-link"><i class="el el-comment"></i></a></li>
 				</ul>
 			</div>
 			<div class="nav__icons__media">

@@ -28,6 +28,16 @@
 	text-align: center;
 	background-color: transparent !important;
 
+	&.tp-rightarrow{
+		left:auto !important;
+		right:0%;
+	}
+
+	&.tp-leftarrow{
+		left:0% !important;
+		margin-left:60px;
+	}
+
 	&:before{
 		position:absolute;
 	    content:'' !important;
