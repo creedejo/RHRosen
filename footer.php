@@ -80,15 +80,18 @@
 <div class="inquiry">
 	<div class="handle"></div>
 	<div class="container">
-		<form>
+		
 		<h3>Let's Talk</h3>
+		<?php echo do_shortcode('[contact-form-7 id="29" title="Inquiry Form"]'); ?>
+		<!--
 		<input type="text" placeholder="Name">
 		<input type="email" placeholder="E-mail Address">
 		<input type="text" placeholder="Phone">
 		<input type="text" placeholder="Subject">
 		<textarea placeholder="Message..."></textarea>
 		<button type="submit">Send Message</button>
-		</form>
+		-->
+		
 	</div>
 </div>
 

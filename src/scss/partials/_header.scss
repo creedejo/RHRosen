@@ -266,5 +266,87 @@
 				}
 			}
 		}
+
+		.search_container{
+			position:absolute;
+			float:none;
+			text-align:left;
+			height:55px;
+			top:100%;
+			width:300px;
+			margin-top:1px;
+			right:190px;
+			box-sizing:border-box;
+			overflow:hidden;
+
+			&.open{
+				.search_wrapper{
+					top:0px;
+				}
+			}
+
+			@media screen and (max-width:$nav-break){
+				display: none;
+			}
+		}
+
+		.search_wrapper{
+				position:absolute;
+				float:none;
+				text-align:left;
+				height:auto;
+				top:-60px;
+				left:0px;
+				width:300px;
+				right:190px;
+				box-sizing:border-box;
+				padding:10px;
+				background-color: rgba(0, 0, 0, 0.9);
+				@include transition(all .2s linear);
+
+				input[type="text"]{
+					color:$light-gray;
+					@include raleway();
+					background:transparent;
+					outline:none;
+					padding:8px 4px;
+					border:none;
+					font-size:16px;
+					width:230px;
+				}
+
+				button{
+					position:relative;
+					background:transparent;
+					outline:none;
+					border:none;
+					font-size:0px;
+					width:35px;
+					height:35px;
+					vertical-align: top;
+					display: inline-block;
+					cursor: pointer;
+
+					&:after{
+						position:absolute;
+						right:0px;
+						top:50%;
+						width: 100%;
+						text-align:center;
+						@include transform(translateY(-50%));
+						content:'\f1ee';
+						font-family: 'ElusiveIcons';
+						font-size:18px;
+						color:$light-gray;
+						@include transition(all .3s linear);
+					}
+
+					&:hover{
+						&:after{
+							color:$dark-gray;
+						}
+					}
+				}
+			}
 	}
 }

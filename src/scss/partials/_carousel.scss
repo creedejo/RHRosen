@@ -31,11 +31,35 @@
 	&.tp-rightarrow{
 		left:auto !important;
 		right:0%;
+
+		@media screen and (max-width:$nav-break){
+			right:-3% !important;
+		}
+
+		@media screen and (max-width:$mobile){
+			right:-14% !important;
+		}
+
+		@media screen and (max-width:$phone){
+			right:-26% !important;
+		}
 	}
 
 	&.tp-leftarrow{
 		left:0% !important;
 		margin-left:60px;
+
+		@media screen and (max-width:$nav-break){
+			left:-3% !important;
+		}
+
+		@media screen and (max-width:$mobile){
+			left:-14% !important;
+		}
+
+		@media screen and (max-width:$phone){
+			left:-21% !important;
+		}
 	}
 
 	&:before{

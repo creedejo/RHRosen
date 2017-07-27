@@ -34,7 +34,7 @@
 			
 			<div class="nav__icons__search">
 				<ul>
-					<li><a href="#"><i class="el el-search"></i></a></li>
+					<li><a href="#" class="toggle_search"><i class="el el-search"></i></a></li>
 					<li><a href="#" class="inquiry-link"><i class="el el-comment"></i></a></li>
 				</ul>
 			</div>
@@ -45,6 +45,15 @@
 					<li><a href="#"><i class="el el-mic"></i></a></li>
 					<li><a href="#"><i class="el el-wordpress"></i></a></li>
 				</ul>
+			</div>
+
+			<div class="search_container">
+				<div class="search_wrapper">
+					<form>
+					<input type="text" id="search" name="search" placeholder="Search" />
+					<button type="submit"></button>
+					</form>
+				</div>
 			</div>
 		</nav>
 		<div class="nav-toggle">

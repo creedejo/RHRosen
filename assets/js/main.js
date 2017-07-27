@@ -3,6 +3,7 @@
 	$page = $(".page_container");
 	$body = $("body");
 	$inquiry = $(".inquiry");
+	$search = $(".search_container");
 	$(document).ready(function(){
 		
 		/* TRIGGER STATS COUNTER */
@@ -54,6 +55,12 @@
 			e.preventDefault();
 			e.stopPropagation();
 			openInquiry();
+		});
+
+		$(".toggle_search").on("touchstart click",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$search.toggleClass("open");
 		});
 	});
 
