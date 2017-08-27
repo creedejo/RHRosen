@@ -213,7 +213,7 @@
 						@include transition(width .2s linear);
 					}
 
-					&:hover:after{
+					&:hover:after,&.active:after{
 						width:100%;
 
 						@media screen and (max-width:$nav-break){
@@ -225,6 +225,7 @@
 						padding:20px 12px 20px 20px;
 						display: block;
 					}
+
 				}
 				
 
@@ -259,6 +260,40 @@
 				&__media{
 					padding-left:24px;
 					border-left:1px solid $white;
+
+					ul{
+						margin-top: -5px;
+					}
+
+					li{
+						i{
+							vertical-align: bottom;
+						}
+					}
+
+					li.blogger{
+						text-align: left;
+						a{
+
+							svg{
+								vertical-align: bottom;
+
+								@media screen and (max-width:$large){
+									height:20px;
+								}
+							}
+							.cls-1{
+								fill:$white;
+								margin-top: 10px;
+							}
+
+							&:hover{
+								.cls-1{
+									fill:$carousel-gray;
+								}
+							}
+						}
+					}
 				}
 
 				@media screen and (max-width:$nav-break){

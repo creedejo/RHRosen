@@ -17,10 +17,13 @@
 	}
 
 	.handle{
+
+		@media screen and (max-width:$mobile){
+			display: none;
+		}
 		position:absolute;
 		width:60px;
-		height:60px;
-		background:$white;
+		height:200px;
 		top:40px;
 		left:-60px;
 		border-left:1px solid $gray;
@@ -28,24 +31,53 @@
 		border-top:1px solid $gray;
 		box-sizing:border-box;
 		cursor: pointer;
-		@include transition(all .3s linear);
 
-		&:before{
-			content:'\f13c';
-			font-family: 'ElusiveIcons';
-			display: block;
-			position:absolute;
-			left:50%;
-			top:50%;
-			font-size:26px;
-			color:$gray;
-			@include transform(translate(-50%,-50%));
-			margin-top:2px;
+		&__icon{
+			width:60px;
+			height:60px;
+			background:$white;
+			position:relative;
+			@include transition(all .3s linear);
+
+			&:before{
+				content:'\f13c';
+				font-family: 'ElusiveIcons';
+				display: block;
+				position:absolute;
+				left:50%;
+				top:50%;
+				font-size:26px;
+				color:$gray;
+				@include transform(translate(-50%,-50%));
+				margin-top:2px;
+			}
 		}
 
+		&__text{
+			top:98px;
+			left:-40px;
+			box-sizing:border-box;
+			padding:20px;
+			text-align:center;
+			text-transform: uppercase;
+			font-weight:800;
+			position:absolute;
+			height:60px;
+			width:140px;
+			background:$gray;
+			color:$white;
+			@include transform(rotate(-90deg));
+			@include raleway();
+			font-size:18px;
+		}
+
+		
+
 		&:hover{
-			background-color:$dark-blue;
-			border-color:$dark-blue;
+			.handle__icon{
+				background-color:$dark-blue;
+				border-color:$dark-blue;
+			}
 		}
 	}
 

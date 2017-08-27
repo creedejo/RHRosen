@@ -47,6 +47,25 @@ body{
 					margin-right:20px;
 				}
 
+				nav .nav__icons__media li.blogger a{
+					.cls-1{
+						fill:$dark-gray !important;
+					}
+
+					&:hover{
+						.cls-1{
+							fill:$dark-blue !important;
+						}
+					}
+
+					svg{
+						height: 18px;
+						margin-left:-4px;
+					}
+
+				}
+				
+
 				.logo__white{
 					opacity:0;
 				}

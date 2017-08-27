@@ -356,6 +356,26 @@
 				    	color:$dark-blue;
 				    }
 				}
+
+				&.blogger{
+					svg{
+						width:20px;
+						position:relative;
+						top:4px;
+						.cls-1{
+							fill:$white;
+							@include transition(all .3s linear);
+						}
+					}
+
+					a:hover{
+						svg{
+							.cls-1{
+								fill:$dark-blue;
+							}
+						}
+					}
+				}
 			}
 		}
 
