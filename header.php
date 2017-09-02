@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title><?= get_bloginfo( 'name' ) . ' | ' . get_the_title() ?></title>
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/elusive-icons.min.css'; ?>">
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:100,300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:100,300,400,500,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/main.css'; ?>">
-	
+	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/lity.min.css'; ?>">
 	<?php wp_head(); ?>
 </head>
 

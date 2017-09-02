@@ -105,3 +105,41 @@ h1{
 
 }
 
+h2{
+	@include raleway();
+	color:$dark-blue;
+}
+
+h3{
+	@include raleway();
+	color:$dark-blue;
+}
+
+p{
+	@include raleway();
+}
+
+a.read_more{
+	text-transform: uppercase;
+	text-decoration:none;
+	@include raleway();
+	padding:10px 20px;
+	display: inline-block;
+	margin:auto;
+	font-size:16px;
+	color:$dark-blue;
+	font-weight:bold;
+	border:2px solid $dark-blue;
+	@include transition(all .3s linear);
+
+	&:hover{
+		background-color:$dark-blue;
+		color:$white;
+	}
+
+	@media screen and (max-width:$landscape){
+		font-size:14px;
+		padding:8px 14px;
+	}
+}
+

@@ -62,6 +62,8 @@
 			e.stopPropagation();
 			$search.toggleClass("open");
 		});
+
+		
 	});
 
 	function startCounter($target){

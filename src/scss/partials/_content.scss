@@ -1,0 +1,191 @@
+.content_page{
+	.hero{
+		position:relative;
+		display: block;
+		width:100%;
+		height:400px;
+		background-color: #000;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:cover;
+
+		@media screen and (max-width:$landscape){
+			height:300px;
+		}
+
+		@media screen and (max-width:$mobile){
+			height:260px;
+		}
+
+		.container{
+			height:100%;
+		}
+
+		&__title{
+			position:absolute;
+			left:30px;
+			bottom:40px;
+			color:#FFF;
+			@include raleway();
+			text-transform: uppercase;
+			font-weight:900;
+			font-size:38px;
+			letter-spacing: 1px;
+
+			@media screen and (max-width:$mobile){
+				font-size:32px;
+				left:0px;
+				bottom:30px;
+				width:100%;
+				text-align:center;
+			}
+		}
+	}
+
+	&__intro{
+		margin:60px 30px;
+		text-align:center;
+
+		h2{
+			margin:20px 0px;
+			font-size:52px;
+			color:$dark-blue;
+			@include raleway();
+
+			@media screen and (max-width:$landscape){
+				font-size:36px;
+			}
+		}
+
+		h3{
+			font-size:24px;
+			@include droid();
+			color:$dark-gray;
+			font-weight:400;
+
+			@media screen and (max-width:$landscape){
+				font-size:18px;
+			}
+		}
+	}
+
+	&__boxes{
+		margin:60px 0px;
+		text-align:center;
+		.container{
+			background-color:$light-gray;
+			padding:30px 20px;
+
+			@media screen and (max-width:$sub-portrait){
+				width:65%;
+				max-width:350px;
+				padding:0px 20px;
+			}
+
+			@media screen and (max-width:$mobile){
+				width:100%;
+				max-width:100%;
+				padding:0px 0px;
+			}
+		}
+
+		&__box{
+			position:relative;
+			display: inline-block;
+			padding:30px 30px 100px 30px;
+			box-sizing:border-box;
+			margin:40px 0 0 0;
+			width:31%;
+			background:#FFF;
+			height:490px;
+			vertical-align:top;
+
+			@media screen and (max-width:$landscape){
+				height:440px;
+				padding:10px 20px 30px;
+			}
+
+			@media screen and (max-width:$sub-portrait){
+				width:100%;
+				margin:20px 0 20px 0;
+				height:auto;
+				padding:30px 14px 80px 14px;
+			}
+
+			@media screen and (max-width:$mobile){
+				width:90%;
+				max-width:90%;
+				padding:30px 30px 80px;
+			}
+
+			&:nth-child(even){
+				margin:40px 2% 0;
+
+				@media screen and (max-width:$sub-portrait){
+					width:100%;
+					margin:20px 0 20px 0;
+				}
+			}
+
+			.img{
+				position:relative;
+				margin-top:-60px;
+
+				@media screen and (max-width:$sub-portrait){
+					margin-top: 10px;
+				}
+
+				img{
+					width:100%;
+					height:auto;
+					margin:auto;
+				}
+			}
+
+			h2{
+				font-size:28px;
+
+				@media screen and (max-width:$landscape){
+					font-size:22px;
+				}
+
+				@media screen and (max-width:$medium){
+					font-size:18px;
+					min-height:42px;
+				}
+
+				@media screen and (max-width:$landscape){
+					font-size:22px;
+				}
+			}
+
+			p{
+				font-size:18px;
+				line-height:26px;
+				color:$dark-gray;
+
+				@media screen and (max-width:$medium){
+					font-size:14px;
+					min-height:110px;
+				}
+
+				@media screen and (max-width:$landscape){
+					font-size:16px;
+				}
+
+				@media screen and (max-width:$mobile){
+					font-size:18px;
+				}
+			}
+
+			.cta{
+				position:absolute;
+				width:100%;
+				text-align:center;
+				bottom:30px;
+				left:0px;
+			}
+
+		}
+	}
+}

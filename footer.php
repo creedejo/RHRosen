@@ -103,8 +103,12 @@
 </div>
 
 </div> <!-- END PAGE CONTAINER -->
+<div id="modal">
+    <!-- Page content -->
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/assets/js/jquery.waypoints.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/assets/js/lity.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/assets/js/main.min.js"></script>
 <?php wp_footer(); ?>
 </body>
