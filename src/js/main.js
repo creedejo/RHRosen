@@ -63,6 +63,12 @@
 			$search.toggleClass("open");
 		});
 
+		$("a.show_me").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$(".bar_fg").removeClass("off");
+		});
+
 		
 	});
 

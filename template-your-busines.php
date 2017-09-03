@@ -5,11 +5,7 @@
 
 <div class="content_page">
 
-<section class="hero" style="background-image:url('<?= get_the_post_thumbnail_url() ?>');">
-	<div class="container">
-		<div class="hero__title">Your Business</div>
-	</div>
-</section>
+<?php get_template_part('partials/hero'); ?>
 
 <section class="content_page__intro">
 	<div class="container">
@@ -52,6 +48,62 @@
 			</div>
 		</div>
 	</div>
+</section>
+
+<section class="content_page__reasons">
+
+	<div class="container">
+		<div class="content_page__reasons__img">
+		<img src="<?php echo bloginfo('template_url'); ?>/assets/images/reasons-left.jpg">
+		</div>
+		<div class="content_page__reasons__bars">
+			<h2>Reasons Clients Turn to Us</h2>
+			<a class="show_me">Show Me</a>
+			<div class="content_page__reasons__bars__items">
+				<div class="bar">
+					<p>They’re frustrated dealing with the same old problems</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-35%;"></div>
+				</div>
+				<div class="bar">
+					<p>They’re tired of worrying about every month’s sales results</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-20%;"></div>
+				</div>
+				<div class="bar">
+					<p>They’re under pressure to improve profits but not making progress</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-25%;"></div>
+				</div>
+				<div class="bar">
+					<p>They’re struggling to improve business-development results</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-30%;"></div>
+				</div>
+				<div class="bar">
+					<p>They’re not finding a way forward in improving plant results</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-25%;"></div>
+				</div>
+				<div class="bar">
+					<p>They’re tired of living with small profits and big pressure</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-20%;"></div>
+				</div>
+				<div class="bar">
+					<p>They’re searching for ways to connect with customers/prospects</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-30%;"></div>
+				</div>
+				<div class="bar">
+					<p>They need help focusing on what’s truly important</p>
+					<div class="tell_me"><a>Tell Me More</a></div>
+					<div class="bar_bg"><div class="bar_fg off" style="left:-35%;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </section>
 
 
