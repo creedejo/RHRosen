@@ -25,9 +25,9 @@
 		<nav>
 			<div class="nav__links">
 				<ul>
-					<li><a href="#" class="active">Home</a></li>
-					<li><a href="#">Your Business</a></li>
-					<li><a href="#">How We Can Help</a></li>
+					<li><a href="/" class="active">Home</a></li>
+					<li><a href="your-business/">Your Business</a></li>
+					<li><a href="how-we-can-help/">How We Can Help</a></li>
 					<li><a href="#">Resources</a></li>
 				</ul>
 			</div>

@@ -202,6 +202,14 @@
 			float:left;
 			width:30%;
 
+			@media screen and (max-width:$large){
+				width:25%;
+			}
+
+			@media screen and (max-width:$sub-landscape){
+				display: none;
+			}
+
 			img{
 				width:100%;
 				height:auto;
@@ -214,9 +222,22 @@
 			width:66%;
 			margin-left:4%;
 
+			@media screen and (max-width:$large){
+				width:70%;
+			}
+
+			@media screen and (max-width:$sub-landscape){
+				width:100%;
+				margin-left:0px;
+			}
+
 			h2{
 				font-size:52px;
 				margin:0px 0px 10px;
+
+				@media screen and (max-width:$landscape){
+					font-size:36px;
+				}
 			}
 
 			&__items{
@@ -231,6 +252,14 @@
 						margin:4px 0px 10px;
 						color:$black;
 						font-weight:600;
+
+						@media screen and (max-width:$large){
+							font-size:14px;
+						}
+
+						@media screen and (max-width:$sub-portrait){
+							width:65%;
+						}
 					}
 
 					.bar_bg{
@@ -264,8 +293,61 @@
 							color:$gray;
 							@include raleway();
 							font-weight:600;
+
+							@media screen and (max-width:$large){
+								font-size:14px;
+							}
 						}
 					}
+				}
+			}
+		}
+	}
+
+	&__numbered{
+		margin:40px 0px;
+
+		.container{
+			background-color:$light-gray;
+			padding:30px 20px;
+			text-align:center;
+		}
+
+		&__box{
+			display: inline-block;
+			vertical-align: top;
+			width:28%;
+			margin:0 2%;
+
+			@media screen and (max-width:$sub-portrait){
+				width:100%;
+				max-width:400px;
+				margin:0px;
+			}
+
+			span.num{
+				@include raleway;
+				font-size:32px;
+				color:$dark-gray;
+				font-weight:900;
+			}
+
+			p{
+				font-size:18px;
+				line-height:26px;
+				color:$dark-gray;
+
+				@media screen and (max-width:$medium){
+					font-size:14px;
+					min-height:110px;
+				}
+
+				@media screen and (max-width:$landscape){
+					font-size:16px;
+				}
+
+				@media screen and (max-width:$mobile){
+					font-size:18px;
 				}
 			}
 		}
