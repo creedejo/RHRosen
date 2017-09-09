@@ -38,6 +38,49 @@
 </section>
 
 
+<section class="content_page__posts">
+
+	<div class="container">
+
+	<?php
+
+	$args = array(
+		'post_type'=>'hwch',
+		'posts_per_page'=>6
+		);
+
+	$hwch = new WP_Query($args);
+
+	if($hwch->have_posts()):
+		while ( $hwch->have_posts() ) : $hwch->the_post();
+	?>
+		<div class="content_page__posts__post">
+			<h2><?php the_title(); ?></h2>
+			<h4><?= get_field('subtitle') ?></h4>
+			<div class="img" style="background-image:url('<?= get_the_post_thumbnail_url() ?>')"></div>
+			<?php the_excerpt(); ?>
+			<a class="read_more">Read More</a>
+		</div>
+
+	<?php
+		endwhile;
+		wp_reset_postdata();
+	endif;
+	?>
+
+	</div>
+
+</section>
+
+
+<section class="content_page__carousel">
+	<div class="container">
+	<div class="home__quotes__bg"></div>
+	<?php putRevSlider( 'quotes' ); ?>
+	</div>
+</section>
+
+
 
 
 </div>

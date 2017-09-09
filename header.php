@@ -28,7 +28,7 @@
 					<li><a href="/" class="active">Home</a></li>
 					<li><a href="your-business/">Your Business</a></li>
 					<li><a href="how-we-can-help/">How We Can Help</a></li>
-					<li><a href="#">Resources</a></li>
+					<li><a href="resources/">Resources</a></li>
 				</ul>
 			</div>
 			

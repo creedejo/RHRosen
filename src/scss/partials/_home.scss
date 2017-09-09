@@ -275,21 +275,7 @@
 			height:100%;
 		}
 
-		.tp-bullets.custom{
-			width:220px !important;
-			margin-bottom:20px;
-
-				.tp-bullet{
-					width:60px;
-					height:8px;
-					background:$carousel-gray;
-					@include border-radius(4px);
-
-					&.selected{
-						background:$dark-blue !important;
-					}
-				}
-			}
+		
 	}
 
 	

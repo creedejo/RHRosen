@@ -69,6 +69,15 @@
 			$(".bar_fg").removeClass("off");
 		});
 
+		$(".jumpmenu a").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var $target = $($(this).attr("href"));
+			var newTop = $target.offset().top - $(".header").height();
+
+			$(".page_container").animate({scrollTop:newTop},1000);
+		});
+
 		
 	});
 

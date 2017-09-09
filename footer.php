@@ -38,7 +38,7 @@
 				<li><a href="#">Don’t Be Fooled by  Busy-ness</a></li>
 			</ul>
 			<div class="footer__links__form">
-				<form>
+				<form class="sub_form">
 					<input type="email" id="sub_email" name="sub_email" placeholder="Subscribe to our Podcast">
 					<button><i class="el el-chevron-right"></i></button>
 				</form>
