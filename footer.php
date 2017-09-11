@@ -58,10 +58,10 @@
 		<div class="footer__nav__col">&copy;2010 - <script>document.write(new Date().getFullYear())</script> RHRosen Associates</div>
 		<div class="footer__nav__col">
 			<ul class="links">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Your Business</a></li>
-				<li><a href="#">How We Can Help</a></li>
-				<li><a href="#">Resources</a></li>
+				<li><a href="<?= get_site_url() ?>">Home</a></li>
+				<li><a href="your-business/">Your Business</a></li>
+				<li><a href="how-we-can-help/">How We Can Help</a></li>
+				<li><a href="resources/">Resources</a></li>
 			</ul>
 		</div>
 		<div class="footer__nav__col">

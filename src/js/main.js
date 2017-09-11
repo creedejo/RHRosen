@@ -5,6 +5,11 @@
 	$inquiry = $(".inquiry");
 	$search = $(".search_container");
 	$(document).ready(function(){
+
+		$("body.home a.navlink_home").addClass("active");
+		$("body.your-business a.navlink_business").addClass("active");
+		$("body.how-we-can-help a.navlink_help").addClass("active");
+		$("body.resources a.navlink_resources").addClass("active");
 		
 		/* TRIGGER STATS COUNTER */
 		var waypoints = $('#stats').waypoint({
@@ -73,9 +78,15 @@
 			e.preventDefault();
 			e.stopPropagation();
 			var $target = $($(this).attr("href"));
-			var newTop = $target.offset().top - $(".header").height();
 
-			$(".page_container").animate({scrollTop:newTop},1000);
+			var currTop = $page.scrollTop();
+			var newTop = $target.offset().top-$(".header").eq(0).height();
+
+			console.log("CURRENT: " + currTop);
+			console.log("TARGET: " + newTop);
+
+			$page.animate({scrollTop:newTop+currTop},1000);
+
 		});
 
 		

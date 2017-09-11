@@ -105,6 +105,14 @@
 
 				@media screen and (max-width:$landscape){
 					font-size:36px;
+					padding-bottom:20px;
+					margin-top:0px;
+				}
+
+				@media screen and (max-width:$portrait){
+					padding-top:20px;
+					margin-bottom:0px;
+					padding-bottom:0px;
 				}
 
 				svg{
@@ -126,7 +134,7 @@
 			padding:30px 30px 100px 30px;
 			box-sizing:border-box;
 			margin:40px 0 0 0;
-			width:31%;
+			width:30%;
 			background:#FFF;
 			height:510px;
 			vertical-align:top;
@@ -511,12 +519,34 @@
 					border-right:none;
 				}
 
+				@media screen and (max-width:$sub-landscape){
+					padding:10px 2%;
+				}
+
+				@media screen and (max-width:$sub-portrait){
+					border-right:none;
+					display: block;
+					padding:20px 0px;
+				}
+
 				a{
 					@include droid();
 					text-decoration: none;
 					color:$dark-blue;
 					font-size:32px;
 					font-weight:600;
+
+					@media screen and (max-width:$large){
+						font-size:26px;
+					}
+
+					@media screen and (max-width:$sub-landscape){
+						font-size:22px;
+					}
+
+					@media screen and (max-width:$sub-portrait){
+						font-size:26px;
+					}
 
 
 					&.book:before{
@@ -554,6 +584,10 @@
 			position:relative;
 			display: block;
 			float:left;
+
+			@media screen and (max-width:$sub-portrait){
+				float:none;
+			}
 		}
 
 		.img{
@@ -564,11 +598,25 @@
 				height:auto;
 				margin-bottom:30px;
 			}
+
+			@media screen and (max-width:$sub-portrait){
+				width:60%;
+				margin:auto;
+			}
 		}
 
 		.copy{
 			width:58%;
 			margin-left:3%;
+
+			@media screen and (max-width:$sub-portrait){
+				width:70%;
+				margin:0px auto 60px;
+			}
+
+			@media screen and (max-width:$mobile){
+				width:90%;
+			}
 
 			h2{
 				font-size:52px;
@@ -638,6 +686,10 @@
 			left:0px;
 			@include transform(translateY(-50%));
 			background-color:$light-gray;
+
+			@media screen and (max-width:$sub-portrait){
+				display: none;
+			}
 		}
 
 		.sep-content{
@@ -645,6 +697,20 @@
 			display: inline-block;
 			background:$white;
 			padding:0px 20px;
+
+			@media screen and (max-width:$large){
+				min-width:40%;
+
+				a.read_more{
+					width:100%;
+					box-sizing:border-box;
+				}
+			}
+
+			@media screen and (max-width:$sub-portrait){
+				min-width:80%;
+				padding:0px 10px;
+			}
 		}
 	}
 }

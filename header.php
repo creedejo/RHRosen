@@ -11,8 +11,11 @@
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/lity.min.css'; ?>">
 	<?php wp_head(); ?>
 </head>
-
-<body class="<?php echo $pagename; ?>">
+<?php
+	global $post;
+	$post_slug=$post->post_name;
+?>
+<body class="<?php echo $post_slug; ?>">
 
 <div class="header">
 	<div class="container">
@@ -25,10 +28,10 @@
 		<nav>
 			<div class="nav__links">
 				<ul>
-					<li><a href="/" class="active">Home</a></li>
-					<li><a href="your-business/">Your Business</a></li>
-					<li><a href="how-we-can-help/">How We Can Help</a></li>
-					<li><a href="resources/">Resources</a></li>
+					<li><a href="<?= get_site_url() ?>" class="navlink_home">Home</a></li>
+					<li><a href="your-business/" class="navlink_business">Your Business</a></li>
+					<li><a href="how-we-can-help/" class="navlink_help">How We Can Help</a></li>
+					<li><a href="resources/" class="navlink_resources">Resources</a></li>
 				</ul>
 			</div>
 			
