@@ -38,7 +38,7 @@
 			<h3>Getting Better Results from a New MIS</h3>
 			<p>The industry is changing in a fundamental way, and it’s not changing back. So don’t blame the internet or stupid competitors.</p>
 			<div class="cta">
-				<a href="#" class="read_more">Read More</a>
+				<a href="/case_study/getting-better-results-from-a-new-mis/" class="read_more">Read More</a>
 			</div>
 		</div>
 		<div class="content_page__boxes__box">

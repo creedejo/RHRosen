@@ -1,4 +1,13 @@
 .content_page{
+
+	.content{
+		p{
+			@include raleway();
+			color:$dark-gray;
+			font-size:16px;
+			line-height:26px;
+		}
+	}
 	padding-bottom:60px;
 
 	h2{

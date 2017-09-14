@@ -30,5 +30,26 @@ function create_hwch_posttype() {
 
 add_action( 'init', 'create_hwch_posttype' );
 
+function create_case_study_posttype() {
+
+    register_post_type( 'case_study',
+    array(
+        'labels' => array(
+            'name'          =>  'Case Studies',
+            'singular_name' =>  'Case Study',
+            'menu_name'     =>  'Case Studies',
+            'all_items'     =>  'All Case Studies',
+            'add_new'       =>  'Add Case Study',
+            'add_new_item'  =>  'Add Case Study'
+            ),
+        'public'    => true,
+        'show_in_admin_bar' =>  true,
+        'supports' => array( 'title', 'editor','thumbnail')
+        )
+    );
+}
+
+add_action( 'init', 'create_case_study_posttype' );
+
 
 ?>
