@@ -4,6 +4,21 @@
 <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<?php
+	$img = get_the_post_thumbnail_url();
+	if($img){
+		?>
+		<meta property="og:image" content="<?= $img ?>" />
+		<?php
+	}
+
+
+	?>
+	<meta property="og:title" content="<?php the_title(); ?>" />
+
+
+
 	<title><?= get_bloginfo( 'name' ) . ' | ' . get_the_title() ?></title>
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/elusive-icons.min.css'; ?>">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:100,300,400,500,700,900" rel="stylesheet">

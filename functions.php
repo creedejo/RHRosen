@@ -44,12 +44,20 @@ function create_case_study_posttype() {
             ),
         'public'    => true,
         'show_in_admin_bar' =>  true,
-        'supports' => array( 'title', 'editor','thumbnail')
+        'supports' => array( 'title', 'editor','thumbnail'),
+        'rewrite' => array('slug' => 'case_studies'),
+        'has_archive' => true
         )
     );
 }
 
 add_action( 'init', 'create_case_study_posttype' );
 
+
+function custom_rewrite_rule() {
+    add_rewrite_tag('%postid%','(.*)');
+    add_rewrite_rule('^print/(.*)$','wp-content/themes/rosen/print.php?postid=$1','top');
+  }
+  add_action('init', 'custom_rewrite_rule', 10, 0);
 
 ?>

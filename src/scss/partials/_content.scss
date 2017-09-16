@@ -89,6 +89,15 @@
 	&__boxes{
 		margin:60px 0px;
 		text-align:center;
+
+		&.archive{
+			margin-top:0px;
+
+			.content_page__boxes__box{
+				margin-top:60px;
+			}
+		}
+
 		.container{
 			background-color:$light-gray;
 			padding:30px 20px;

@@ -9,13 +9,7 @@
 
 <section class="case_study__categories">
 	<div class="container">
-		<ul>
-			<li><a href="#" class="active">All Case Studies</a></li>
-			<li><a href="#">Profit Improvement</a></li>
-			<li><a href="#">Sales &amp; Marketing</a></li>
-			<li><a href="#">Exploring Alternatives</a></li>
-			<li><a href="#">Mergers &amp; Acquisitions</a></li>
-		</ul>
+		<?php get_template_part('partials/cs_categories'); ?>
 	</div>
 </section>
 
@@ -35,6 +29,17 @@
 <section class="case_study__content content">
 	<div class="container">
 		<?php the_content() ?>
+	</div>
+</section>
+
+<section class="case_study__links">
+	<div class="container">
+		<ul>
+			<li><a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><i class="el el-twitter"></i></a></li>
+			<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?= get_field('intro_text',false,false) ?>" target="_blank"><i class="el el-linkedin"></i></a></li>
+			<li><a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="el el-envelope"></i></a></li>
+			<li><a href="javascript:window.open('<?= get_site_url() ?>/print/<?= the_id(); ?>', '<?php the_title() ?>', 'width=600,height=400');"><i class="el el-print"></i></a></li>
+		</ul>
 	</div>
 </section>
 
