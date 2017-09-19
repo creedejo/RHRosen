@@ -16,7 +16,7 @@
 <section class="case_study__intro">
 	<div class="container">
 		<div class="case_study__intro__title" style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');">
-			<div class="overlay"></div>
+			<div class="post_title_overlay"></div>
 			<h1><?php the_title(); ?></h1>
 		</div>
 		<div class="case_study__intro__text">

@@ -8,8 +8,13 @@ switch($post_type){
 	case "case_study":
 		$pg =  get_page_by_title( 'Resources' );
 		$pid = $pg->ID;
-		//$pgTitle=$pg->post_title;
 		$pgTitle = 'Case Studies';
+		$featured_img = get_the_post_thumbnail_url($pid);
+	break;
+	case "hwch":
+		$pg =  get_page_by_title( 'Resources' );
+		$pid = $pg->ID;
+		$pgTitle = 'How We Can Help';
 		$featured_img = get_the_post_thumbnail_url($pid);
 	break;
 

@@ -59,7 +59,7 @@
 			<h4><?= get_field('subtitle') ?></h4>
 			<div class="img" style="background-image:url('<?= get_the_post_thumbnail_url() ?>')"></div>
 			<?php the_excerpt(); ?>
-			<a class="read_more">Read More</a>
+			<a href="<?= get_the_permalink() ?>" class="read_more">Read More</a>
 		</div>
 
 	<?php

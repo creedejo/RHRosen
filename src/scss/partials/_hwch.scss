@@ -1,0 +1,108 @@
+.hwch{
+	&__content{
+
+		padding-top:20px;
+
+		.container{
+			@include clear();
+		}
+
+		.col{
+			display: block;
+			float:left;
+			position: relative;
+
+			&.left{
+				width:25%;
+			}
+
+			&.right{
+				width:73%;
+				margin-left:2%;
+			}
+		}
+	}
+
+	&__title{
+		position:relative;
+		box-sizing:border-box;
+		width:100%;
+		padding:20px 20px 40%;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+
+		h1{
+			position:relative;
+			color:$white;
+			@include raleway();
+			font-size:36px;
+			width:60%;
+			margin:0px;
+			padding:0px;
+			z-index:2;
+		}
+
+		p.subtitle{
+			margin-top: 10px;
+			position:relative;
+			z-index:2;
+			color:$white;
+			font-size:22px;
+			@include droid();
+			font-style: italic;
+		}
+	}
+
+	&__sidenav{
+		position:relative;
+		display: block;
+
+		ul{
+			padding:0px;
+			margin:0px;
+			list-style-type:none;
+
+			li{
+				display: block;
+				position:relative;
+
+				a{
+					display: block;
+					padding:12px 10px 12px 36px;
+					margin-bottom:10px;
+					background-color:$light-gray;
+					@include raleway();
+					font-size:16px;
+					color:$dark-gray;
+					font-weight:600;
+					text-decoration:none;
+					@include transition(all .3s);
+
+					&:hover,&.active{
+						background-color: $dark-blue;
+						color:$white;
+					}
+				}
+			}
+		}
+	}
+
+	&__talk{
+		position:relative;
+		display:block;
+		width:100%;
+		margin-top:100px;
+		padding:20px 30px;
+		background-color:$dark-blue;
+		box-sizing:border-box;
+
+		p{
+			color:$white !important;
+
+			a.btn_white{
+				margin-top:20px;
+			}
+		}
+	}
+}

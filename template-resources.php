@@ -31,36 +31,42 @@
 <section id="case_studies" class="content_page__boxes">
 	<div class="container">
 	<h2 class="box-header">Case Studies</h2>
+
+	<?php
+
+
+
+	$args = array(
+		'post_type'=>'case_study',
+		'posts_per_page'=>3
+		);
+
+	$case_studies = new WP_Query($args);
+
+
+	if($case_studies->have_posts()):
+		while ( $case_studies->have_posts() ) : $case_studies->the_post();
+
+	?>
+
 		<div class="content_page__boxes__box">
 			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/cs_1.png">
+				<img src="<?= get_the_post_thumbnail_url(); ?>">
 			</div>
-			<h3>Getting Better Results from a New MIS</h3>
-			<p>The industry is changing in a fundamental way, and it’s not changing back. So don’t blame the internet or stupid competitors.</p>
+			<h3><?php the_title(); ?></h3>
+			<?= get_field("intro_text"); ?>
 			<div class="cta">
-				<a href="<?= get_site_url() ?>/case_studies/getting-better-results-from-a-new-mis/" class="read_more">Read More</a>
+				<a href="<?= get_the_permalink(); ?>" class="read_more">Read More</a>
 			</div>
 		</div>
-		<div class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/cs_2.png">
-			</div>
-			<h3>Curing Those Problem Sales Months</h3>
-			<p>You’re not seeking some cosmic secret. Just choose the right things to focus on, and be careful  who you listen to.</p>
-			<div class="cta">
-				<a href="#" class="read_more" >Read More</a>
-			</div>
-		</div>
-		<div class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/cs_3.png">
-			</div>
-			<h3>Becoming Easy to Do Business With</h3>
-			<p>Profit-leading CEOs don’t have any new secrets. They’re just doing a better job of focusing on what really matters.</p>
-			<div class="cta">
-				<a href="<?= get_site_url() ?>/case_studies/becoming-easy-to-do-business-with/" class="read_more" >Read More</a>
-			</div>
-		</div>
+
+	<?php
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
+	?>
+
 	</div>
 </section>
 
