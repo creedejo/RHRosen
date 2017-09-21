@@ -14,11 +14,25 @@
 
 			&.left{
 				width:25%;
+
+				@media screen and (max-width:$medium){
+					width:100%;	
+				}
 			}
 
 			&.right{
 				width:73%;
 				margin-left:2%;
+
+				@media screen and (max-width:$medium){
+					width:100%;
+					margin-left:0px;	
+				}
+			}
+
+			@media screen and (max-width:$medium){
+				float:none;
+				width:100%;	
 			}
 		}
 	}
@@ -59,6 +73,10 @@
 		display: block;
 
 		ul{
+
+			@media screen and (max-width:$medium){
+				display: none;	
+			}
 			padding:0px;
 			margin:0px;
 			list-style-type:none;
@@ -69,7 +87,7 @@
 
 				a{
 					display: block;
-					padding:12px 10px 12px 36px;
+					padding:12px 10px 12px 34px;
 					margin-bottom:10px;
 					background-color:$light-gray;
 					@include raleway();
@@ -78,6 +96,15 @@
 					font-weight:600;
 					text-decoration:none;
 					@include transition(all .3s);
+
+					&:before{
+						content:'\f10c';
+						font-family: 'ElusiveIcons';
+						margin-right:10px;
+						position:absolute;
+						left:10px;
+						top:14px;
+					}
 
 					&:hover,&.active{
 						background-color: $dark-blue;
@@ -96,6 +123,10 @@
 		padding:20px 30px;
 		background-color:$dark-blue;
 		box-sizing:border-box;
+
+		@media screen and (max-width:$medium){
+			display: none;	
+		}
 
 		p{
 			color:$white !important;

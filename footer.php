@@ -22,12 +22,12 @@
 		<div class="footer__links__col">
 			<h3>Services:</h3>
 			<ul>
-				<li><a href="#">Exploring Alternatives</a></li>
-				<li><a href="#">Opportunity Audits</a></li>
-				<li><a href="#">Sales &amp; Marketing</a></li>
-				<li><a href="#">Profit Improvement</a></li>
-				<li><a href="#">Competetive Review</a></li>
-				<li><a href="#">Mergers &amp; Acquisitions</a></li>
+				<li><a href="<?= get_site_url() ?>/hwch/exploring-alternatives/">Exploring Alternatives</a></li>
+				<li><a href="<?= get_site_url() ?>/hwch/opportunity-audit/">Opportunity Audits</a></li>
+				<li><a href="<?= get_site_url() ?>/hwch/sales-marketing/">Sales &amp; Marketing</a></li>
+				<li><a href="<?= get_site_url() ?>/hwch/profit-improvement/">Profit Improvement</a></li>
+				<li><a href="<?= get_site_url() ?>/hwch/improving-competitiveness/">Competetive Review</a></li>
+				<li><a href="<?= get_site_url() ?>/hwch/mergers-acquisitions/">Mergers &amp; Acquisitions</a></li>
 			</ul>
 		</div>
 		<div class="footer__links__col">
