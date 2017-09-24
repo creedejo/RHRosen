@@ -6,10 +6,12 @@
 	$search = $(".search_container");
 	$(document).ready(function(){
 
+		
 		$("body.home a.navlink_home").addClass("active");
 		$("body.your-business a.navlink_business").addClass("active");
 		$("body.how-we-can-help a.navlink_help").addClass("active");
 		$("body.resources a.navlink_resources").addClass("active");
+
 		
 		/* TRIGGER STATS COUNTER */
 		var waypoints = $('#stats').waypoint({
@@ -62,6 +64,10 @@
 			openInquiry();
 		});
 
+		$(".inquiry__close").on('touchstart click',function(e){
+			closeInquiry();
+		});
+
 		$(".toggle_search").on("touchstart click",function(e){
 			e.preventDefault();
 			e.stopPropagation();
@@ -88,6 +94,22 @@
 			$page.animate({scrollTop:newTop+currTop},1000);
 
 		});
+
+		$(".btn_explore").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			console.log('scroll to next section');
+			console.log($('html,body').scrollTop());
+			var newTop = $(".carousel").height();
+			$('html, body, .page_container').animate({
+			    scrollTop: newTop-20
+			 }, 750);
+		});
+
+		$(".home__path__steps .step a").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		})
 
 		
 	});

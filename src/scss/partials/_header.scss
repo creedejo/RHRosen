@@ -201,6 +201,10 @@
 					position:relative;
 					padding:6px 0px;
 
+					&.active-bold{
+						font-weight:600;
+					}
+
 					&:after{
 						width:0px;
 						height:2px;
@@ -370,7 +374,7 @@
 						text-align:center;
 						@include transform(translateY(-50%));
 						content:'\f1ee';
-						font-family: 'ElusiveIcons';
+						font-family: 'Elusive-Icons';
 						font-size:18px;
 						color:$light-gray;
 						@include transition(all .3s linear);

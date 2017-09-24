@@ -42,7 +42,7 @@
 
 			&:before{
 				content:'\f13c';
-				font-family: 'ElusiveIcons';
+				font-family: 'Elusive-Icons';
 				display: block;
 				position:absolute;
 				left:50%;
@@ -128,6 +128,23 @@
 				background-color:$dark-blue;
 			}
 		}
+	}
+
+	&__close{
+		display: none;
+		position:absolute;
+		right:10px;
+		top:-10px;
+	    cursor: pointer;
+	    color:$dark-gray;
+
+	    &:hover{
+	    	color:$dark-blue;
+	    }
+
+	    @media screen and (max-width:$mobile){
+	    	display: block;
+	    }
 	}
 }
 

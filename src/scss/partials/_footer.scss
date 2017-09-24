@@ -188,7 +188,7 @@
 					position:relative;
 
 					&:before{
-						font-family:"ElusiveIcons";
+						font-family:"Elusive-Icons";
 						content:'\f10c';
 						position:absolute;
 						left:0px;
@@ -259,6 +259,10 @@
 					color:$white;
 					text-decoration: none;
 					text-transform: uppercase;
+
+					&.active{
+						font-weight:600;
+					}
 
 					&:hover{
 						text-decoration:underline;

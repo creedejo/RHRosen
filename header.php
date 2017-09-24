@@ -43,10 +43,10 @@
 		<nav>
 			<div class="nav__links">
 				<ul>
-					<li><a href="<?= get_site_url() ?>" class="navlink_home">Home</a></li>
-					<li><a href="<?= get_site_url() ?>/your-business/" class="navlink_business">Your Business</a></li>
-					<li><a href="<?= get_site_url() ?>/how-we-can-help/" class="navlink_help">How We Can Help</a></li>
-					<li><a href="<?= get_site_url() ?>/resources/" class="navlink_resources">Resources</a></li>
+					<li><a href="<?= get_site_url() ?>" class="navlink_home <?php if($post_slug=="home"){echo ' active-bold ';} ?>">Home</a></li>
+					<li><a href="<?= get_site_url() ?>/your-business/" class="navlink_business <?php if($post_slug=="your-business"){echo ' active-bold ';} ?>">Your Business</a></li>
+					<li><a href="<?= get_site_url() ?>/how-we-can-help/" class="navlink_help <?php if($post_slug=="how-we-can-help"){echo ' active-bold ';} ?>">How We Can Help</a></li>
+					<li><a href="<?= get_site_url() ?>/resources/" class="navlink_resources <?php if($post_slug=="resources"){echo ' active-bold ';} ?>">Resources</a></li>
 				</ul>
 			</div>
 			
@@ -58,7 +58,7 @@
 			</div>
 			<div class="nav__icons__media">
 				<ul>
-					<li><a href="#"><i class="el el-linkedin"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/bob-rosen-5440835/"><i class="el el-linkedin"></i></a></li>
 					<li><a href="#"><i class="el el-book"></i></a></li>
 					<li><a href="#"><i class="el el-mic"></i></a></li>
 					<li class="blogger"><a href="#">

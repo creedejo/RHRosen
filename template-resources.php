@@ -70,6 +70,15 @@
 	</div>
 </section>
 
+<section class="content_page__seperator">
+	<div class="container">
+	<div class="bg-bar"></div>
+	<div class="sep-content">
+		<a href="<?= get_site_url() ?>/case_studies" class="read_more">View All Case Studies</a>
+	</div>
+	</div>
+</section>
+
 <section id="the_book" class="content_page__image-left">
 	<div class="container">
 		<div class="img">

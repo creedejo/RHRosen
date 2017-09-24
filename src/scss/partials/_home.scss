@@ -66,6 +66,30 @@
 				box-sizing:border-box;
 				text-align:center;
 
+				text-decoration:none;
+				outline:none;
+
+				span.read_more{
+					text-transform: uppercase;
+					text-decoration:none;
+					@include raleway();
+					padding:10px 20px;
+					display: inline-block;
+					margin:auto;
+					font-size:16px;
+					color:$dark-blue;
+					font-weight:bold;
+					border:2px solid $dark-blue;
+					@include transition(all .3s linear);
+				}
+
+				&:hover{
+					span.read_more{
+						background-color:$dark-blue;
+						color:$white;
+					}
+				}
+
 				@media screen and (max-width:$medium){
 					padding:20px 10px 40px;
 				}
@@ -252,7 +276,7 @@
 				position:absolute;
 				left:50%;
 				@include transform(translate(-50%, -50%));
-				font-family: 'ElusiveIcons';
+				font-family: 'Elusive-Icons';
 			}
 
 			&:before{

@@ -53,6 +53,27 @@ function create_case_study_posttype() {
 
 add_action( 'init', 'create_case_study_posttype' );
 
+function create_lets_talk_posttype() {
+
+    register_post_type( 'lets_talk',
+    array(
+        'labels' => array(
+            'name'          =>  'Lets Talk',
+            'singular_name' =>  'Lets Talk',
+            'menu_name'     =>  'Lets Talk',
+            'all_items'     =>  'All Phrases',
+            'add_new'       =>  'Add Phrase',
+            'add_new_item'  =>  'Add Phrase'
+            ),
+        'public'    => true,
+        'show_in_admin_bar' =>  true,
+        'supports' => array( 'title','editor')
+        )
+    );
+}
+
+add_action( 'init', 'create_lets_talk_posttype' );
+
 
 function custom_rewrite_rule() {
     add_rewrite_tag('%postid%','(.*)');

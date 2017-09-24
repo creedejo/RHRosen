@@ -569,13 +569,13 @@
 
 					&.book:before{
 						content:'\f118';
-						font-family: 'ElusiveIcons';
+						font-family: 'Elusive-Icons';
 						margin-right:10px;
 					}
 
 					&.podcast:before{
 						content:'\f1a9';
-						font-family: 'ElusiveIcons';
+						font-family: 'Elusive-Icons';
 						margin-right:10px;
 					}
 
@@ -593,6 +593,11 @@
 	}
 
 	&__image-left{
+
+		&#the_book{
+			margin-top:70px;
+		}
+
 		position:relative;
 		display: block;
 		text-align: left;

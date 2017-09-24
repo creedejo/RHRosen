@@ -4,7 +4,17 @@
 	<div class="overlay_color"></div>
 	<div class="container">
 		<div class="footer__inquiry__content">
-			<p>Let us help you build this year’s profits <b>and</b> build a path to the future.</p>
+			<?php
+				$args = array(
+					'post_type'	=> 'lets_talk',
+					'posts_per_page' => -1
+				);
+				$lt = get_posts($args);
+
+				//echo count($lt);
+				$lt_index = rand(0,count($lt)-1);
+				echo apply_filters('the_content',$lt[$lt_index]->post_content);
+			?>
 		</div>
 		<div class="footer__inquiry__button">
 			<a href="#" class="inquiry-link">Let's Talk</a>
@@ -58,15 +68,15 @@
 		<div class="footer__nav__col">&copy;2010 - <script>document.write(new Date().getFullYear())</script> RHRosen Associates</div>
 		<div class="footer__nav__col">
 			<ul class="links">
-				<li><a href="<?= get_site_url() ?>">Home</a></li>
-				<li><a href="your-business/">Your Business</a></li>
-				<li><a href="how-we-can-help/">How We Can Help</a></li>
-				<li><a href="resources/">Resources</a></li>
+				<li><a href="<?= get_site_url() ?>" class="navlink_home">Home</a></li>
+				<li><a href="<?= get_site_url() ?>/your-business/" class="navlink_business">Your Business</a></li>
+				<li><a href="<?= get_site_url() ?>/how-we-can-help/" class="navlink_help">How We Can Help</a></li>
+				<li><a href="<?= get_site_url() ?>/resources/" class="navlink_resources">Resources</a></li>
 			</ul>
 		</div>
 		<div class="footer__nav__col">
 			<ul class="icons">
-				<li><a href="#"><i class="el el-linkedin"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/bob-rosen-5440835/"><i class="el el-linkedin"></i></a></li>
 				<li><a href="#"><i class="el el-book"></i></a></li>
 				<li><a href="#"><i class="el el-mic"></i></a></li>
 				<li class="blogger"><a href="#">
@@ -98,6 +108,8 @@
 		<textarea placeholder="Message..."></textarea>
 		<button type="submit">Send Message</button>
 		-->
+
+		<div class="inquiry__close"><i class="el el-remove"></i></div>
 		
 	</div>
 </div>

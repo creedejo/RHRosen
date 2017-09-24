@@ -29,6 +29,14 @@ body{
 				nav .nav__links a{
 					color:$dark-gray;
 
+					&.active{
+						color: $dark-blue;
+
+						&:after{
+							background-color:$dark-blue;
+						}
+					}
+
 					&:hover{
 						color:$dark-blue;
 						&:after{
