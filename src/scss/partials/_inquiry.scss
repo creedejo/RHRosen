@@ -48,7 +48,7 @@
 				left:50%;
 				top:50%;
 				font-size:26px;
-				color:$gray;
+				color:$dark-gray;
 				@include transform(translate(-50%,-50%));
 				margin-top:2px;
 			}
@@ -65,7 +65,7 @@
 			position:absolute;
 			height:60px;
 			width:140px;
-			background:$gray;
+			background:$dark-gray;
 			color:$white;
 			@include transform(rotate(-90deg));
 			@include raleway();
@@ -78,6 +78,10 @@
 			.handle__icon{
 				background-color:$dark-blue;
 				border-color:$dark-blue;
+
+				&:before{
+					color:$white;
+				}
 			}
 		}
 	}

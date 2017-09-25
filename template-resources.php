@@ -12,6 +12,7 @@
 		<h3>It’s not like us to withold support for your success.</h3>
 		<h2>Our resources can help you reframe pressing challenges... now.</h2>
 		<h3>That’s why we’re here</h3>
+		<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
 
@@ -142,10 +143,7 @@
 	<div class="container">
 	<div class="bg-bar"></div>
 	<div class="sep-content">
-		<form class="sub_form">
-			<input type="email" id="sub_email" name="sub_email" placeholder="Subscribe to our Podcast">
-			<button><i class="el el-chevron-right"></i></button>
-		</form>
+		<a href="<?= get_site_url() ?>/case_studies" class="read_more">View Podcast Page</a>
 	</div>
 	</div>
 </section>
@@ -193,10 +191,7 @@
 	<div class="container">
 	<div class="bg-bar"></div>
 	<div class="sep-content">
-		<form class="sub_form">
-			<input type="email" id="sub_email" name="sub_email" placeholder="Subscribe to our Blog">
-			<button><i class="el el-chevron-right"></i></button>
-		</form>
+		<a href="<?= get_site_url() ?>/case_studies" class="read_more">View All Blog Posts</a>
 	</div>
 	</div>
 </section>

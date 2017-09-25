@@ -7,11 +7,12 @@
 
 <?php get_template_part('partials/hero'); ?>
 
-<section class="content_page__intro">
+<section id="intro" class="content_page__intro down-scroll">
 	<div class="container">
 		<h3>Just when you thought things were going to get easier,</h3>
 		<h2>You’re facing some big decisions!</h2>
 		<h3>It’s time to be profitable and build a future at the same time.</h3>
+		<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
 
@@ -94,11 +95,6 @@
 					<p>They’re searching for ways to connect with customers/prospects</p>
 					<div class="tell_me"><a>Tell Me More</a></div>
 					<div class="bar_bg"><div class="bar_fg off" style="left:-30%;"></div>
-				</div>
-				<div class="bar">
-					<p>They need help focusing on what’s truly important</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-35%;"></div>
 				</div>
 			</div>
 		</div>

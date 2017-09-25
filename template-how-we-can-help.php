@@ -7,11 +7,12 @@
 
 <?php get_template_part('partials/hero'); ?>
 
-<section class="content_page__intro">
+<section class="content_page__intro down-scroll">
 	<div class="container">
 		<h3>Doing more of the same just won’t work any more.</h3>
 		<h2>Let’s get results – soon!</h2>
 		<h3>It’s not rocket science, and don’t let anyone tell you it is.</h3>
+		<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
 

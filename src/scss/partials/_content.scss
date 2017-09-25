@@ -1,5 +1,20 @@
 .content_page{
 
+	&__down{
+		a{
+			text-decoration: none;
+			font-size:42px;
+			color:$dark-gray;
+			@include transition(all .3s);
+			cursor: pointer;
+
+			&:hover{
+				color: $dark-blue;
+			}
+
+		}
+	}
+
 	.content{
 		p{
 			@include raleway();
@@ -62,6 +77,10 @@
 	&__intro{
 		margin:60px 30px;
 		text-align:center;
+
+		&.down-scroll{
+			margin:60px 30px 20px;
+		}
 
 		h2{
 			margin:20px 0px;
@@ -154,7 +173,8 @@
 			margin:40px 0 0 0;
 			width:30%;
 			background:#FFF;
-			height:510px;
+			//height:510px;
+			height:480px;
 			vertical-align:top;
 
 			@media screen and (max-width:$landscape){
@@ -218,7 +238,7 @@
 			}
 
 			p{
-				font-size:18px;
+				font-size:16px;
 				line-height:26px;
 				color:$dark-gray;
 

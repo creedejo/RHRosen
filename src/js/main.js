@@ -111,6 +111,14 @@
 			e.stopPropagation();
 		})
 
+		$(".content_page__down a").on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var $section = $(this).closest('section');
+			var ntop = $(".hero").height()+$section.height()+40;
+			$("html,body,.page_container").animate({scrollTop:ntop},500);
+		});
+
 		
 	});
 
