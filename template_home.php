@@ -64,5 +64,10 @@
 
 <?php endwhile; ?>
 <?php endif; ?>
-
+<script type="text/javascript">
+if (document.images) {
+    img1 = new Image();
+    img1.src = "<?= get_template_directory_uri() ?>/assets/images/icons_path_over.png";
+}
+</script>
 <?php get_footer(); ?>

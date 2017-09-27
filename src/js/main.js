@@ -116,7 +116,7 @@
 			e.stopPropagation();
 			var $section = $(this).closest('section');
 			var ntop = $(".hero").height()+$section.height()+40;
-			$("html,body,.page_container").animate({scrollTop:ntop},500);
+			$("html,body,.page_container").animate({scrollTop:ntop},600);
 		});
 
 		

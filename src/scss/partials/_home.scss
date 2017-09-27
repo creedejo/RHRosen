@@ -88,6 +88,10 @@
 						background-color:$dark-blue;
 						color:$white;
 					}
+
+					.icon{
+						background-image:url('../images/icons_path_over.png');
+					}
 				}
 
 				@media screen and (max-width:$medium){
