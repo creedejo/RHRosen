@@ -23,7 +23,7 @@ function create_hwch_posttype() {
             ),
         'public'    => true,
         'show_in_admin_bar' =>  true,
-        'supports' => array( 'title', 'editor','thumbnail')
+        'supports' => array( 'title', 'editor','thumbnail','excerpt')
         )
     );
 }
