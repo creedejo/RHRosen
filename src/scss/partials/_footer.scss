@@ -112,6 +112,10 @@
 			padding-left:15px;
 			padding-right:15px;
 
+			&.bbottom{
+				padding-bottom:60px;
+			}
+
 			&:first-child{
 				width: 25%;
 				@media screen and (max-width:$nav-break){
@@ -211,6 +215,29 @@
 				}
 			}
 		}
+
+		&__button{
+			a{
+				margin:14px 0px;
+				color:$white;
+				@include raleway();
+				font-size: 14px;
+				display: block;
+				border:2px solid $white;
+				padding:8px 0px;
+				text-align:center;
+				text-decoration: none;
+				text-transform: uppercase;
+				max-width:220px;
+				@include transition(all .3s);
+				font-weight:600;
+
+				&:hover{
+					background:$dark-blue;
+				}
+			}
+		}
+
 	}
 
 	&__nav{

@@ -47,12 +47,19 @@
 				<li><a href="#">The CEO’s 7 Deadly Sins</a></li>
 				<li><a href="#">Don’t Be Fooled by  Busy-ness</a></li>
 			</ul>
+			<!--
 			<div class="footer__links__form">
 				<form class="sub_form">
 					<input type="email" id="sub_email" name="sub_email" placeholder="Subscribe to our Podcast">
 					<button><i class="el el-chevron-right"></i></button>
 				</form>
 			</div>
+			-->
+
+			<div class="footer__links__button">
+				<a href="#">Explore Our Podcasts</a>
+			</div>
+
 		</div>
 		<div class="footer__links__col">
 			<h3>Recent Blog Posts:</h3>
@@ -60,6 +67,10 @@
 				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
 				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
 			</ul>
+
+			<div class="footer__links__button">
+				<a href="#">Explore Our Blog</a>
+			</div>
 		</div>
 	</div>
 </section>

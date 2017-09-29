@@ -16,7 +16,7 @@
 	}
 
 	.content{
-		p{
+		p,ul li{
 			@include raleway();
 			color:$dark-gray;
 			font-size:16px;
