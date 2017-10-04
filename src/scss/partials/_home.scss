@@ -270,6 +270,18 @@
 		background-color:$light-gray;
 		height:400px;
 
+		@media screen and (max-width:$medium){
+			height:320px;
+		}
+
+		@media screen and (max-width:$portrait){
+			height:270px;
+		}
+
+		@media screen and (max-width:$phone){
+			height:210px;
+		}
+
 		&__bg{
 			position:absolute;
 			left:0px;
@@ -301,6 +313,19 @@
 		.container{
 			position:relative;
 			height:100%;
+		}
+
+
+		.tparrows{
+			@media screen and (max-width:$sub-portrait){
+				display: none !important;
+			}
+		}
+
+		.rev_slider{
+			@media screen and (max-width:$sub-portrait){
+				padding-bottom:40px !important;
+			}
 		}
 
 		

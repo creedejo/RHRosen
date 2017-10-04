@@ -35,10 +35,10 @@
 <div class="header">
 	<div class="container">
 		<div class="logo logo__white">
-			<img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr.png">
+			<a href="<?= get_site_url(); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr.png"></a>
 		</div>
 		<div class="logo logo__blue">
-			<img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr_blue.png">
+			<a href="<?= get_site_url(); ?>"><img src="<?php bloginfo('template_directory') ?>/assets/images/logo_rhr_blue.png"></a>
 		</div>
 		<nav>
 			<div class="nav__links">
