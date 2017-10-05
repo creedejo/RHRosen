@@ -132,6 +132,10 @@ p{
 }
 
 
+a{
+	outline:0;
+}
+
 a.read_more,a.show_me{
 	text-transform: uppercase;
 	text-decoration:none;
@@ -183,4 +187,19 @@ a.btn_white{
 		font-size:14px;
 		padding:8px 14px;
 	}
+}
+
+span.read_more{
+	text-transform: uppercase;
+	box-sizing:border-box;
+	text-decoration:none;
+	@include raleway();
+	padding:10px 20px;
+	display: inline-block;
+	margin:auto;
+	font-size:16px;
+	color:$dark-blue;
+	font-weight:bold;
+	border:2px solid $dark-blue;
+	@include transition(all .3s linear);
 }

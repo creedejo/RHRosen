@@ -370,3 +370,36 @@
 		}
 	}
 }
+
+.back_top_top{
+	position:fixed;
+	display:none;
+	background-color:$dark-blue;
+	bottom:54px;
+	right:20px;
+	width:40px;
+	height:40px;
+	@include transition(background-color .3s);
+	cursor:pointer;
+
+	@media screen and (max-width:$mobile){
+		height:0px;
+		width:0px;
+		right:-100px;
+	}
+
+	&:after{
+		content:'\f130';
+		font-family: "Elusive-Icons";
+		color:$white;
+		position:absolute;
+		left:50%;
+		top:50%;
+		@include transform(translate(-50%,-50%));
+	}
+
+	&:hover{
+		background-color:$dark-gray;
+	}
+
+}

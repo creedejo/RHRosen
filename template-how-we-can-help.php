@@ -39,7 +39,7 @@
 </section>
 
 
-<section class="content_page__posts">
+<section id="section_services" class="content_page__posts">
 
 	<div class="container">
 
@@ -55,7 +55,7 @@
 	if($hwch->have_posts()):
 		while ( $hwch->have_posts() ) : $hwch->the_post();
 	?>
-		<div class="content_page__posts__post">
+		<a href="<?= get_the_permalink() ?>" class="content_page__posts__post">
 			<?php
 				$thumb_id = get_post_thumbnail_id();
 				$thumb_url = wp_get_attachment_image_src($thumb_id,'medium', true);
@@ -65,8 +65,8 @@
 			<h4><?= get_field('subtitle') ?></h4>
 			<div class="img" style="background-image:url('<?= $thumb_url[0] ?>')"></div>
 			<?php the_excerpt(); ?>
-			<a href="<?= get_the_permalink() ?>" class="read_more">Read More</a>
-		</div>
+			<span class="read_more">Read More</span>
+		</a>
 
 	<?php
 		endwhile;

@@ -1,3 +1,7 @@
+body.how-we-can-help .content_page{
+	padding-bottom:0px;
+}
+
 .content_page{
 
 	&__down{
@@ -176,6 +180,14 @@
 			//height:510px;
 			height:480px;
 			vertical-align:top;
+			text-decoration: none;
+
+			&:hover{
+				span.read_more{
+					background-color:$dark-blue;
+					color:$white;
+				}
+			}
 
 			@media screen and (max-width:$landscape){
 				height:440px;
@@ -446,6 +458,7 @@
 			padding-bottom:50px;
 			vertical-align: top;
 			min-height:560px;
+			text-decoration: none;
 
 			@media screen and (max-width:$landscape){
 				min-height:530px;
@@ -511,16 +524,24 @@
 				}
 			}
 
-			a.read_more{
+			a.read_more,span.read_more{
 				position:absolute;
 				left:0px;
 				bottom:10px;
+			}
+
+			&:hover{
+				span.read_more{
+					background-color:$dark-blue;
+					color:$white;
+				}
 			}
 		}
 	}
 
 	&__carousel{
 		background:$light-gray;
+		margin-top:60px;
 
 		.tp-bullets.custom{
 			width:220px !important;

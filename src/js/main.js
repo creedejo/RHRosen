@@ -1,11 +1,40 @@
 (function($) {
 	var $counter = $("#stats .container");
-	$page = $(".page_container");
-	$body = $("body");
-	$inquiry = $(".inquiry");
-	$search = $(".search_container");
+	var $page = $(".page_container");
+	var $body = $("body");
+	var $inquiry = $(".inquiry");
+	var $search = $(".search_container");
+	var $btop = $(".back_top_top");
 	$(document).ready(function(){
 
+		if(window.location.hash) {
+		  var section_to_scroll = "section_"+window.location.hash.substr(1);
+		  var $section_to_scroll = $("#"+section_to_scroll);
+		  //alert($section_to_scroll.position().top);
+		  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()},600);
+		}
+
+		$(".home__path__steps a.step").on('touchstart click',function(e){
+			//e.preventDefault();
+			//e.stopPropagation();
+			var leftOff = $(this).data("lity-position");
+			var classToAdd = "lity-"+leftOff;
+			if(classToAdd=="lity-left"){
+				$body.removeClass("lity-right");
+			}
+			if(classToAdd=="lity-right"){
+				$body.removeClass("lity-left");
+			}
+
+			if(classToAdd=="lity-center"){
+				$body.removeClass("lity-left");
+				$body.removeClass("lity-right");
+			}
+			else{
+				$body.addClass(classToAdd);
+			}
+			//return true;
+		});
 		
 		$("body.home a.navlink_home").addClass("active");
 		$("body.your-business a.navlink_business").addClass("active");
@@ -118,6 +147,26 @@
 			var ntop = $(".hero").height()+$section.height()+40;
 			$("html,body,.page_container").animate({scrollTop:ntop},600);
 		});
+
+		$btop.on('touchstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$page.animate({scrollTop:0},1200);
+		});
+
+		$page.scroll(function(){
+			var st = $page.scrollTop();
+			if(st>=200 && !$btop.hasClass("visible")){
+				$btop.addClass("visible");
+				$btop.fadeIn();
+			}
+
+			if(st<200 && $btop.hasClass("visible")){
+				$btop.removeClass("visible");
+				$btop.fadeOut();
+			}
+		});
+
 
 		
 	});

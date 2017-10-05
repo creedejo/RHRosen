@@ -28,3 +28,15 @@
 .lity-opened{
 	background:rgba(0,0,0,.7) !important;
 }
+
+body.lity-left .lity-container{
+	@media screen and (min-width:$landscape){
+		margin-left:-20%;
+	}
+}
+
+body.lity-right .lity-container{
+	@media screen and (min-width:$landscape){
+		margin-left:20%;
+	}
+}

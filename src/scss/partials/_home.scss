@@ -58,6 +58,7 @@
 
 			.step{
 				background-color:$light-gray;
+				position:relative;
 				display: block;
 				float:left;
 				width:31%;
@@ -65,23 +66,34 @@
 				padding: 20px 30px 40px;
 				box-sizing:border-box;
 				text-align:center;
+				height:480px;
 
 				text-decoration:none;
 				outline:none;
 
 				span.read_more{
-					text-transform: uppercase;
-					text-decoration:none;
-					@include raleway();
-					padding:10px 20px;
-					display: inline-block;
-					margin:auto;
-					font-size:16px;
-					color:$dark-blue;
-					font-weight:bold;
-					border:2px solid $dark-blue;
-					@include transition(all .3s linear);
+					position:absolute;
+					bottom:30px;
+					left:50%;
+					@include transform(translateX(-50%));
+				    display: block;
+					width: 100%;
+					max-width:140px;
+
+					&:before{
+						content:'';
+						display: block;
+						position:absolute !important;
+						width:30px;
+						height:2px;
+						background-color:$dark-gray;
+						position:absolute;
+						left:50%;
+						top:-30px;
+						@include transform(translateX(-50%));
+					}
 				}
+
 
 				&:hover{
 					span.read_more{
@@ -92,6 +104,10 @@
 					.icon{
 						background-image:url('../images/icons_path_over.png');
 					}
+				}
+
+				@media screen and (max-width:$landscape){
+					height:400px;
 				}
 
 				@media screen and (max-width:$medium){
@@ -185,19 +201,6 @@
 				p:last-of-type{
 
 					padding-bottom:30px;
-
-					&:after{
-						content:'';
-						display: block;
-						position:absolute;
-						width:30px;
-						height:2px;
-						background-color:$dark-gray;
-						position:absolute;
-						left:50%;
-						bottom:0px;
-						@include transform(translateX(-50%));
-					}
 
 					@media screen and (max-width:$landscape){
 						padding-bottom:10px;

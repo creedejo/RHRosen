@@ -14,7 +14,7 @@
 		<div class="col left">
 			<div class="hwch__sidenav">
 				<ul>
-					<li><a href="<?= get_site_url() ?>/how-we-can-help">All Service Offerings</a></li>
+					<li><a href="<?= get_site_url() ?>/how-we-can-help#services">All Service Offerings</a></li>
 
 					<?php
 
