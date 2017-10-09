@@ -12,7 +12,7 @@
 		<h3>Just when you thought things were going to get easier,</h3>
 		<h2>You’re facing some big decisions!</h2>
 		<h3>It’s time to be profitable and build a future at the same time.</h3>
-		<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
+		<div class="content_page__down init"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
 
@@ -50,6 +50,7 @@
 			</div>
 		</a>
 	</div>
+	<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 </section>
 
 <section class="content_page__reasons">
@@ -60,7 +61,7 @@
 		</div>
 		<div class="content_page__reasons__bars">
 			<h2>Reasons Clients Turn to Us</h2>
-			<a class="show_me">Show Me</a>
+			<a class="show_me">Show Me</a><span class="arrow_pulse_left"><i class="el el-chevron-left"></i></span>
 			<div class="content_page__reasons__bars__items">
 				<div class="bar">
 					<p>They’re frustrated dealing with the same old problems</p>
@@ -102,6 +103,7 @@
 	</div>
 
 </section>
+<div class="content_page__down mobile"><a href="#intro" data-target=".footer"><i class="el el-chevron-down"></i></a></div>
 
 
 </div>

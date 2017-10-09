@@ -1,0 +1,30 @@
+@keyframes bounce {
+	0%, 100%, 5%, 13%, 20% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	10% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+	15% {
+		-webkit-transform: translateY(-8px);
+		-ms-transform:     translateY(-8px);
+		transform:         translateY(-8px)
+	}
+}
+
+@keyframes pulse{
+  0%,100%{
+    opacity:0;
+  }
+  0%{
+    @include transform(scale(.75,.75) translateX(10px));
+  }
+  50%{
+    opacity:1;
+  }
+}
+

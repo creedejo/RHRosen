@@ -12,7 +12,7 @@
 		<h3>It’s not like us to withold support for your success.</h3>
 		<h2>Our resources can help you reframe pressing challenges... now.</h2>
 		<h3>That’s why we’re here</h3>
-		<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
+		<div class="content_page__down init"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
 

@@ -6,14 +6,42 @@ body.how-we-can-help .content_page{
 
 	&__down{
 		a{
+			position:relative;
+			display: block;
+			margin:60px auto;
 			text-decoration: none;
 			font-size:42px;
-			color:$dark-gray;
+			width:42px;
+			height:42px;
+			color:$dark-blue;
 			@include transition(all .3s);
 			cursor: pointer;
 
 			&:hover{
-				color: $dark-blue;
+				color: $dark-gray;
+				
+			}
+
+			i{
+				position:relative;
+				display: block;
+				//left:50%;
+				//@include transform(translateX(-50%));
+				-webkit-animation-duration: 4s;
+				animation-duration: 4s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+				-webkit-animation-timing-function: ease-in-out;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;
+				
+				&.bounce{
+					animation-name: bounce;
+  					-moz-animation-name: bounce;
+  					-webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
+    				animation-delay: 4s;
+				}
 			}
 
 		}
@@ -390,6 +418,24 @@ body.how-we-can-help .content_page{
 						}
 					}
 				}
+			}
+		}
+
+		.arrow_pulse_left{
+			i{
+				margin-left: 10px;
+				font-size: 24px;
+				color:$gray;
+				-webkit-animation-duration: 1.2s;
+				animation-duration: 1.2s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+				-webkit-animation-timing-function: ease-in-out;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+				-webkit-animation-iteration-count: infinite;
+				animation-name: pulse;
+  				-moz-animation-name: pulse;
 			}
 		}
 	}

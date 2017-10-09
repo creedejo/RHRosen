@@ -148,6 +148,7 @@ a.read_more,a.show_me{
 	font-weight:bold;
 	border:2px solid $dark-blue;
 	@include transition(all .3s linear);
+	cursor:pointer;
 
 	&:hover{
 		background-color:$dark-blue;
@@ -202,4 +203,9 @@ span.read_more{
 	font-weight:bold;
 	border:2px solid $dark-blue;
 	@include transition(all .3s linear);
+}
+.mobile{
+	@media screen and (min-width:$mobile){
+		display:none;
+	}
 }

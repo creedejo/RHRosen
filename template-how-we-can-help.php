@@ -35,7 +35,7 @@
 		<p>Small changes add up, and you’ll see progress quickly – in weeks and months, not years. You’ll need persistence, but you won’t need much patience.</p>
 	</div>
 </div>
-
+<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 </section>
 
 
