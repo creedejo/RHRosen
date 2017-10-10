@@ -191,7 +191,7 @@
 	<div class="container">
 	<div class="bg-bar"></div>
 	<div class="sep-content">
-		<a href="<?= get_site_url() ?>/case_studies" class="read_more">View All Blog Posts</a>
+		<a href="<?= get_site_url() ?>/blog" class="read_more">View All Blog Posts</a>
 	</div>
 	</div>
 </section>
