@@ -18,6 +18,15 @@
 					<li><a href="#">Exploring Alternatives</a></li>
 					<li><a href="#">Mergers &amp; Acquisitions</a></li>
 				</ul>
+				<div class="blog_filters_select">
+					<select id="blog_filters_mobile">
+						<option value="">All Blog Posts</option>
+						<option value="">Profit Improvement</option>
+						<option value="">Sales &amp; Marketing</option>
+						<option value="">Exploring Alternatives</option>
+						<option value="">Mergers &amp; Acquisitions</option>
+					</select>
+				</div>
 			</div>
 			<div class="blog_filters__search">
 				<form class="search_form">

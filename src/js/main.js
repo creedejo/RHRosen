@@ -191,6 +191,8 @@
 		  },{context: '.page_container'});
 		});
 		*/
+
+		$("#blog_filters_mobile").select2();
 	});
 
 	function startCounter($target){

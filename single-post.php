@@ -7,28 +7,30 @@
 
 <?php get_template_part('partials/hero'); ?>
 
-<section class="case_study__categories">
-	<div class="container">
-		<?php get_template_part('partials/cs_categories'); ?>
-	</div>
-</section>
 
-<section class="case_study__intro">
+<section class="blog__content content">
 	<div class="container">
-		<div class="case_study__intro__title" style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');">
-			<div class="post_title_overlay"></div>
-			<h1><?php the_title(); ?></h1>
+		<div class="col-75">
+			<?php
+			$img = get_the_post_thumbnail_url();
+			if($img):
+				?>
+				<div class="blog__content__img"><img src="<?= $img ?>"></div>
+				<?php
+			endif;
+			?>
+			<h2><?php the_title(); ?></h2>
+			<div class="blog__content__info">
+				<ul class="info">
+					<li><?php the_date('M d, Y'); ?></li>
+				</ul>
+			</div>
+			<?php the_content() ?>
 		</div>
-		<div class="case_study__intro__text">
-			<?= get_field('intro_text') ?>
+
+		<div class="col-25">
+25
 		</div>
-	</div>
-</section>
-
-
-<section class="case_study__content content">
-	<div class="container">
-		<?php the_content() ?>
 	</div>
 </section>
 
