@@ -78,7 +78,24 @@ add_action( 'init', 'create_lets_talk_posttype' );
 function custom_rewrite_rule() {
     add_rewrite_tag('%postid%','(.*)');
     add_rewrite_rule('^print/(.*)$','wp-content/themes/rosen/print.php?postid=$1','top');
+
+    add_rewrite_tag('%blogcat%','(.*)');
+    add_rewrite_tag('%blogtag%','(.*)');
+    add_rewrite_tag('%blogsearch%','(.*)');
+
+    add_rewrite_rule('^blog/category/(.*)/?', 'index.php?page_id=123&blogcat=$matches[1]', 'top');
+    add_rewrite_rule('^blog/tag/(.*)/?', 'index.php?page_id=123&blogtag=$matches[1]', 'top');
+    add_rewrite_rule('^blog/search/(.*)/?', 'index.php?page_id=123&blogsearch=$matches[1]', 'top');
+    //add_rewrite_rule('^new_site/blog/category/(.*)/?', 'index.php?page_id=96&blogcat=$matches[1]', 'top');
+    //add_rewrite_rule('^new_site/blog/tag/(.*)/?', 'index.php?page_id=96&blogtag=$matches[1]', 'top');
+    //add_rewrite_rule('^new_site/blog/search/(.*)/?', 'index.php?page_id=96&blogsearch=$matches[1]', 'top');
   }
   add_action('init', 'custom_rewrite_rule', 10, 0);
+
+
+function custom_excerpt_length( $length ) {
+    return 24;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 ?>

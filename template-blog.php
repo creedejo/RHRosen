@@ -7,94 +7,107 @@
 
 <?php get_template_part('partials/hero'); ?>
 
+<?php
+
+
+		global $wp_query;
+		$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+		$args = array(
+			'post_type'=>'post',
+			'posts_per_page' => 6,
+			'paged' => $paged
+		);
+
+
+		if($wp_query->query_vars['blogcat']){
+			//$searchby = 'category';
+			$category = $wp_query->query_vars['blogcat'];
+			$args['category_name']=$wp_query->query_vars['blogcat'];
+		}
+
+		if($wp_query->query_vars['blogtag']){
+			$category="none";
+			$args['tag']=$wp_query->query_vars['blogtag'];
+		}
+		if($wp_query->query_vars['blogsearch']){
+			$category="none";
+			$args['s']=$wp_query->query_vars['blogsearch'];
+		}
+
+
+?>
 <section id="the_blog" class="content_page__boxes">
 	<div class="container">
 		<div class="blog_filters">
 			<div class="blog_filters__filters">
 				<ul>
-					<li><a href="#" class="active">All Blog Posts</a></li>
-					<li><a href="#">Profit Improvement</a></li>
-					<li><a href="#">Sales &amp; Marketing</a></li>
-					<li><a href="#">Exploring Alternatives</a></li>
-					<li><a href="#">Mergers &amp; Acquisitions</a></li>
+					<li><a href="<?= get_site_url() ?>/blog" class="<?php if(!$category){echo 'active';} ?>">All Blog Posts</a></li>
+					<li><a href="<?= get_site_url() ?>/blog/category/profit-improvement" class="<?php if($category=='profit-improvement'){echo 'active';} ?>">Profit Improvement</a></li>
+					<li><a href="<?= get_site_url() ?>/blog/category/sales-marketing" class="<?php if($category=='sales-marketing'){echo 'active';} ?>">Sales &amp; Marketing</a></li>
+					<li><a href="<?= get_site_url() ?>/blog/category/exploring-alternatives" class="<?php if($category=='exploring-alternatives'){echo 'active';} ?>">Exploring Alternatives</a></li>
+					<li><a href="<?= get_site_url() ?>/blog/category/mergers-acquisitions" class="<?php if($category=='mergers-acquisitions'){echo 'active';} ?>">Mergers &amp; Acquisitions</a></li>
 				</ul>
 				<div class="blog_filters_select">
 					<select id="blog_filters_mobile">
-						<option value="">All Blog Posts</option>
-						<option value="">Profit Improvement</option>
-						<option value="">Sales &amp; Marketing</option>
-						<option value="">Exploring Alternatives</option>
-						<option value="">Mergers &amp; Acquisitions</option>
+						<option value="all" <?php if(!$category){echo 'selected';} ?>>All Blog Posts</option>
+						<option value="profit-improvement" <?php if($category=='profit-improvement'){echo 'selected';} ?>>Profit Improvement</option>
+						<option value="sales-marketing" <?php if($category=='sales-marketing'){echo 'selected';} ?>>Sales &amp; Marketing</option>
+						<option value="exploring-alternatives" <?php if($category=='exploring-alternatives'){echo 'selected';} ?>>Exploring Alternatives</option>
+						<option value="mergers-acquisitions" <?php if($category=='mergers-acquisitions'){echo 'selected';} ?>>Mergers &amp; Acquisitions</option>
 					</select>
 				</div>
 			</div>
 			<div class="blog_filters__search">
-				<form class="search_form">
-					<input type="text" id="search" name="search" placeholder="Search">
-					<button><i class="el el-search"></i></button>
+				<form id="blog_search_form" class="search_form">
+					<input type="text" id="blog_search" name="search" placeholder="Search">
+					<button class="blog_search_submit"><i class="el el-search"></i></button>
 				</form>
 			</div>
 		</div>
-		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/bl_1.png">
-			</div>
-			<h3>Don’t Give Away Productivity Gains</h3>
-			<p>The industry is changing in a fundamental way, and it’s not changing back! So don’t blame the internet or stupid competitors.</p>
+
+		<?php
+		
+
+		$query = new WP_Query($args);
+
+
+		if($query->have_posts()):
+		while ( $query->have_posts() ) : $query->the_post();
+		?>
+
+		<a href="<?= get_the_permalink() ?>" class="content_page__boxes__box">
+			<div class="header_img" style="background-image:url('<?= get_the_post_thumbnail_url() ?>');"></div>
+
+			<h3><?php the_title(); ?></h3>
+			<?php the_excerpt(); ?>
 			<div class="cta">
 				<span class="read_more">Read More</span>
 			</div>
 		</a>
-		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/bl_2.png">
-			</div>
-			<h3>Just Say "YES" to that Extra Job</h3>
-			<p>You’re not seeking some cosmic secret. Just choose the right things to focus on, and be careful who you listen to.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
-		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/bl_3.png">
-			</div>
-			<h3>A Cautionary Tale for Printers</h3>
-			<p>Profit-leading CEOs don’t have any unique secrets. They’re just doing a better job of focusing on what really matters.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
-		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/bl_1.png">
-			</div>
-			<h3>Don’t Give Away Productivity Gains</h3>
-			<p>The industry is changing in a fundamental way, and it’s not changing back! So don’t blame the internet or stupid competitors.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
-		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/bl_2.png">
-			</div>
-			<h3>Just Say "YES" to that Extra Job</h3>
-			<p>You’re not seeking some cosmic secret. Just choose the right things to focus on, and be careful who you listen to.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
-		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/bl_3.png">
-			</div>
-			<h3>A Cautionary Tale for Printers</h3>
-			<p>Profit-leading CEOs don’t have any unique secrets. They’re just doing a better job of focusing on what really matters.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
+		<?php
+		endwhile;
+		wp_reset_postdata();
+		endif;
+		?>
+
+		<div class="pagination">
+		<?php
+
+        $big = 999999999; // need an unlikely integer
+ 
+		echo paginate_links( array(
+		    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		    'format' => '?paged=%#%',
+		    'current' => max( 1, get_query_var('paged') ),
+		    'total' => $query->max_num_pages,
+		    'next_text' => '<i class="el el-arrow-right"></i>',
+		    'prev_text' => '<i class="el el-arrow-left"></i>'
+		) );
+    ?>
+    	</div>
+
+		
+		
 	</div>
 </section>
 

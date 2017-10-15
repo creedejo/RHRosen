@@ -15,7 +15,7 @@
 			$img = get_the_post_thumbnail_url();
 			if($img):
 				?>
-				<div class="blog__content__img"><img src="<?= $img ?>"></div>
+				<div class="blog__content__img" style="background-image:url('<?= $img ?>');"></div>
 				<?php
 			endif;
 			?>
@@ -28,8 +28,83 @@
 			<?php the_content() ?>
 		</div>
 
-		<div class="col-25">
-25
+		<div class="col-25 blog__content__sidebar">
+			<div class="blog__content__sidebar__search">
+				<form id="blog_search_form" class="search_form">
+					<input type="text" id="blog_search" name="search" placeholder="Search">
+					<button class="blog_search_submit"><i class="el el-search"></i></button>
+				</form>
+			</div>
+			<?php
+				$cats = get_categories();
+
+				if($cats):
+			?>
+			<h3>Categories</h3>
+			<ul>
+				<?php
+				foreach($cats as $cat):
+				?>
+				<li><a href="<?= get_site_url() . '/blog/category/' . $cat->slug ?>"><?= $cat->name ?></a></li>
+				<!--
+				<li><a href="#">Profit Improvement</a></li>
+				<li><a href="#">Sales &amp; Marketing</a></li>
+				<li><a href="#">Exploring Alternatives</a></li>
+				<li><a href="#">Mergers &amp; Acquisitions</a></li>
+				-->
+				<?php
+				endforeach;
+				?>
+			</ul>
+
+			<?php
+				endif;
+			?>
+
+			<a href="<?= get_site_url() ?>/blog" class="btn-gray">View all blog posts</a>
+
+			<?php
+			$args = array(
+				'post_type'=>'post',
+				'numberposts'=>2,
+				'exclude' => get_the_ID()
+			);
+			$recent = wp_get_recent_posts($args);
+
+			if($recent):
+			?>
+			<h3>Recent Posts</h3>
+			<ul>
+				<?php
+				foreach($recent as $rec):
+				?>
+				<li><a href="<?= get_the_permalink($rec["ID"]) ?>"><?= $rec['post_title'] ?><span class="recent_date"><?= get_the_date('M d,Y',$rec["ID"]) ?></span></a></li>
+				<?php
+				endforeach;
+				?>
+			</ul>
+			<?php
+			endif;
+			?>
+
+			<?php
+			$tags = get_tags();
+			if($tags):
+			?>
+			<div class="blog__content__sidebar__tags">
+				<h3>Tags</h3>
+				<?php
+				foreach ( $tags as $tag ):
+				?>
+					<a href="<?= get_site_url() . '/blog/tag/' . $tag->slug ?>"><?= $tag->name ?></a>
+				<?php
+				endforeach;
+				?>
+			</div>
+			<?php
+			endif;
+			?>
+
 		</div>
 	</div>
 </section>

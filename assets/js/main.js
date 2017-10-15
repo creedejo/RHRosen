@@ -193,6 +193,28 @@
 		*/
 
 		$("#blog_filters_mobile").select2();
+		$("#blog_filters_mobile").on('change',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var val = $(this).val();
+			if(val!="all"){
+				window.location='/new_site/blog/category/'+val;
+			}
+			else{
+				window.location='/new_site/blog';
+			}
+		});
+
+		
+		$("#blog_search_form").submit(function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var val = $("#blog_search").val();
+			if(val){
+				window.location = '/new_site/blog/search/'+val;
+			}
+		});
+
 	});
 
 	function startCounter($target){

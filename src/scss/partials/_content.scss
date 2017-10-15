@@ -210,6 +210,19 @@ body.how-we-can-help .content_page{
 			vertical-align:top;
 			text-decoration: none;
 
+			.header_img{
+				position:relative;
+				padding-bottom:65%;
+				background-size:cover;
+				background-repeat:no-repeat;
+				background-position:center center;
+				margin-top:-60px;
+
+				@media screen and (max-width:$sub-portrait){
+					//margin-top: 10px;
+				}
+			}
+
 			&:hover{
 				span.read_more{
 					background-color:$dark-blue;
@@ -842,4 +855,30 @@ body.how-we-can-help .content_page{
 	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.pagination{
+
+	a,span.current{
+		padding:9px 0px;
+		width:38px;
+		display: inline-block;
+		font-weight:600;
+		font-size:18px;
+		text-align:center;
+		@include raleway();
+	}
+	a{
+		color:$dark-gray;
+		background-color:$gray;
+		text-decoration: none;
+	}
+	span.current{
+		background-color:$dark-blue;
+		color:$white;
+	}
+
+	span.current{
+
+	}
 }
