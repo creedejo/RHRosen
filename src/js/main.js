@@ -11,8 +11,14 @@
 		if(window.location.hash) {
 		  var section_to_scroll = "section_"+window.location.hash.substr(1);
 		  var $section_to_scroll = $("#"+section_to_scroll);
-		  //alert($section_to_scroll.position().top);
-		  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()},600);
+
+		 	if($section_to_scroll.length>0){
+			  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()},600);
+			}
+
+			if(window.location.hash.substr(1)=="respond" || window.location.hash.substr(1).indexOf('comment')>=0){
+				$page.animate({scrollTop:$("#respond").position().top-$(".header").height()},600);
+			}
 		}
 
 		$(".home__path__steps a.step").on('touchstart click',function(e){
