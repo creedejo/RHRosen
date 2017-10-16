@@ -23,9 +23,63 @@
 			<div class="blog__content__info">
 				<ul class="info">
 					<li><?php the_date('M d, Y'); ?></li>
+
+					<?php
+
+						$cats = wp_get_post_categories(get_the_ID());
+
+						if(!empty($cats)){
+							?>
+							<li>
+								<?php
+								$count=0;
+								foreach($cats as $c):
+									$cat = get_category( $c );
+									if($count>0){echo ', ';}
+									$count++;
+									?>
+									<a href="<?= get_site_url() ?>/blog/category/<?= $cat->slug ?>"><?= $cat->name ?></a>
+									<?php
+								endforeach;
+								?>
+							</li>
+							<?php
+						}
+
+					?>
+
+					<?php
+						$comments = get_comments( array(
+						    'post_id' => get_the_ID(),
+						    'status' => 'approve',
+						) );
+						if ( !empty( $comments ) )
+						{
+							?>
+							<li>COMMENTS: <?= count($comments) ?></li>
+							<?php
+						}
+						?>
 				</ul>
 			</div>
+
 			<?php the_content() ?>
+
+			<!-- =========== SOCIAL ============= -->
+			<section class="case_study__links blog-social">
+				<div class="container">
+					<ul>
+						<li><a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><i class="el el-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?= get_field('intro_text',false,false) ?>" target="_blank"><i class="el el-linkedin"></i></a></li>
+						<li><a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="el el-envelope"></i></a></li>
+						<li><a href="javascript:window.open('<?= get_site_url() ?>/print/<?= the_id(); ?>', '<?php the_title() ?>', 'width=600,height=400');"><i class="el el-print"></i></a></li>
+					</ul>
+				</div>
+			</section>
+			<!-- =========== COMMENTS ============= -->
+
+
+			<?php get_template_part('partials/comments'); ?>
 		</div>
 
 		<div class="col-25 blog__content__sidebar">
@@ -36,6 +90,7 @@
 				</form>
 			</div>
 			<?php
+
 				$cats = get_categories();
 
 				if($cats):
@@ -109,16 +164,7 @@
 	</div>
 </section>
 
-<section class="case_study__links">
-	<div class="container">
-		<ul>
-			<li><a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><i class="el el-twitter"></i></a></li>
-			<li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?= get_field('intro_text',false,false) ?>" target="_blank"><i class="el el-linkedin"></i></a></li>
-			<li><a href="mailto:?subject=<?php the_title(); ?>&body=<?php the_permalink(); ?>"><i class="el el-envelope"></i></a></li>
-			<li><a href="javascript:window.open('<?= get_site_url() ?>/print/<?= the_id(); ?>', '<?php the_title() ?>', 'width=600,height=400');"><i class="el el-print"></i></a></li>
-		</ul>
-	</div>
-</section>
+
 
 
 </div>
