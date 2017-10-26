@@ -7,7 +7,7 @@
 
 <?php get_template_part('partials/hero'); ?>
 
-<section class="content_page__intro">
+<section class="content_page__intro down-scroll margin-bottom">
 	<div class="container">
 		<h3>It’s not like us to withold support for your success.</h3>
 		<h2>Our resources can help you reframe pressing challenges... now.</h2>

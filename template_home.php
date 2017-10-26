@@ -41,15 +41,15 @@
 <section id="stats" class="home__stats">
 	<div class="container">
 		<div class="stat">
-			<span class="count" data-start="0" data-end="643">HELLO</span>
+			<span class="count" data-start="0" data-end="643"></span>
 			<span class="label">Companies</span>	
 		</div>
 		<div class="stat">
-			<span class="count" data-start="800" data-end="1421">1,421</span>
+			<span class="count" data-start="800" data-end="1421"></span>
 			<span class="label">Projects</span>	
 		</div>
 		<div class="stat">
-			<span class="count" data-start="0" data-end="54">54</span>
+			<span class="count" data-start="0" data-end="54"></span>
 			<span class="label">Transactions</span>	
 		</div>
 	</div>

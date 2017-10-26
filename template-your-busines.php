@@ -50,7 +50,7 @@
 			</div>
 		</a>
 	</div>
-	<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
+	<div class="content_page__down top-margin"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 </section>
 
 <section class="content_page__reasons">
@@ -103,7 +103,8 @@
 	</div>
 
 </section>
-<div class="content_page__down mobile"><a href="#intro" data-target=".footer"><i class="el el-chevron-down"></i></a></div>
+<!--
+<div class="content_page__down mobile"><a href="#intro" data-target=".footer"><i class="el el-chevron-down"></i></a></div>-->
 
 
 </div>

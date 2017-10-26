@@ -57,7 +57,7 @@
 		    }
 		  },
 		  context: '.page_container',
-		  offset: '150%'
+		  offset: '100%'
 		});
 
 		/* UPDATE HEADER ON SCROLL */
