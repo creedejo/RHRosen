@@ -136,6 +136,7 @@
 <script src="<?php bloginfo('template_directory') ?>/assets/js/jquery.waypoints.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/assets/js/lity.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+<script src="<?php bloginfo('template_directory') ?>/assets/tooltipster/tooltipster.bundle.min.js"></script>
 <script src="<?php bloginfo('template_directory') ?>/assets/js/main.min.js"></script>
 <?php wp_footer(); ?>
 </body>

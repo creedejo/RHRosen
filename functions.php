@@ -8,6 +8,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 */
 
 add_theme_support( 'post-thumbnails' );
+add_post_type_support( 'page', 'excerpt' );
 
 function create_hwch_posttype() {
 
@@ -46,7 +47,8 @@ function create_case_study_posttype() {
         'show_in_admin_bar' =>  true,
         'supports' => array( 'title', 'editor','thumbnail'),
         'rewrite' => array('slug' => 'case_studies'),
-        'has_archive' => true
+        'has_archive' => true,
+        'taxonomies'  => array( 'category' )
         )
     );
 }

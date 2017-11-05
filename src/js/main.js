@@ -8,6 +8,15 @@
 	var $btop = $(".back_top_top");
 	$(document).ready(function(){
 
+		if($("body").hasClass("home")){
+			$content = $(".home_content");
+		}
+
+		$('.tell_me a').tooltipster({
+			trigger: 'click',
+			maxWidth: 296
+		});
+
 		if(window.location.hash) {
 		  var section_to_scroll = "section_"+window.location.hash.substr(1);
 		  var $section_to_scroll = $("#"+section_to_scroll);
@@ -151,6 +160,7 @@
 		$(".content_page__down a").on('touchstart click',function(e){
 			e.preventDefault();
 			e.stopPropagation();
+
 			var $section;
 			if($(this).data("target")){
 				$section=$($(this).data("target"));
@@ -158,14 +168,10 @@
 			else{
 				$section = $(this).closest('section').next('section');
 			}
-			console.log($section.attr('class'));
-			//var ntop = $(".hero").height()+$section.height()+40;
-			console.log("SECTION: " + $section.offset().top);
-			console.log("PAGE: " + $page.offset().top);
-			//var ntop = $(".hero").height() + $section.position().top+60-$page.scrollTop();
+			
+			console.log("I AM HERE 1b" + $content.offset().top);
+			console.log("I AM HERE 2");
 			var ntop = $section.offset().top-$content.offset().top-$page.offset().top-$(".header").height();
-			console.log("ntop = " + ntop);
-			console.log($section.attr('class'));
 			$("html,body,.page_container").animate({scrollTop:ntop},600);
 		});
 

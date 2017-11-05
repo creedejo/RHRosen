@@ -9,46 +9,34 @@
 
 <section id="intro" class="content_page__intro down-scroll">
 	<div class="container">
-		<h3>Just when you thought things were going to get easier,</h3>
-		<h2>You’re facing some big decisions!</h2>
-		<h3>It’s time to be profitable and build a future at the same time.</h3>
+		<?php the_field('intro_text'); ?>
 		<div class="content_page__down init"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
 
 <section class="content_page__boxes">
 	<div class="container">
-		<a href="surviving-in-a-changing-industry/" class="content_page__boxes__box" data-lity>
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/boxes/surviving.png">
-			</div>
-			<h2>Surviving in a Changing Industry</h2>
-			<p>The industry is changing in a fundamental way, and it’s not changing back! So don’t blame the internet or stupid competitors.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
 
-		<a href="adapting-your-approach/" class="content_page__boxes__box" data-lity>
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/boxes/adapting.png">
-			</div>
-			<h2>Adapting Your Approach</h2>
-			<p>You’re not seeking some cosmic secret. Just choose the right things to focus on, and be careful who you listen to.</p>
+		<?php
+
+		$posts = get_field('pages');
+
+		if( $posts ): ?>
+
+		<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+		<?php setup_postdata($post); ?>
+		<a href="<?php the_permalink(); ?>" class="content_page__boxes__box" data-lity>
+			<div class="img" style="background-image: url('<?= get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?>');"></div>
+			<h2><?php the_title(); ?></h2>
+			<?php the_excerpt(); ?>
 			<div class="cta">
 				<span class="read_more">Read More</span>
 			</div>
 		</a>
-		<a href="some-things-havent-changed" class="content_page__boxes__box" data-lity>
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/boxes/some-things.png">
-			</div>
-			<h2>Some Things Haven’t Changed</h2>
-			<p>Profit-leading CEOs don’t have any unique secrets. They’re just doing a better job of focusing on what really matters.</p>
-			<div class="cta">
-				<span class="read_more">Read More</span>
-			</div>
-		</a>
+		<?php endforeach; ?>
+
+		<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
 	</div>
 	<div class="content_page__down top-margin"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 </section>
@@ -63,41 +51,39 @@
 			<h2>Reasons Clients Turn to Us</h2>
 			<a class="show_me">Show Me</a><span class="arrow_pulse_left"><i class="el el-chevron-left"></i></span>
 			<div class="content_page__reasons__bars__items">
-				<div class="bar">
-					<p>They’re frustrated dealing with the same old problems</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-35%;"></div>
-				</div>
-				<div class="bar">
-					<p>They’re tired of worrying about every month’s sales results</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-20%;"></div>
-				</div>
-				<div class="bar">
-					<p>They’re under pressure to improve profits but not making progress</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-25%;"></div>
-				</div>
-				<div class="bar">
-					<p>They’re struggling to improve business-development results</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-30%;"></div>
-				</div>
-				<div class="bar">
-					<p>They’re not finding a way forward in improving plant results</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-25%;"></div>
-				</div>
-				<div class="bar">
-					<p>They’re tired of living with small profits and big pressure</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-20%;"></div>
-				</div>
-				<div class="bar">
-					<p>They’re searching for ways to connect with customers/prospects</p>
-					<div class="tell_me"><a>Tell Me More</a></div>
-					<div class="bar_bg"><div class="bar_fg off" style="left:-30%;"></div>
-				</div>
+
+				<?php
+
+
+				if( have_rows('reasons') ):
+					$reasonCtr=0;
+				 	// loop through the rows of data
+				    while ( have_rows('reasons') ) : the_row();
+				    	$num = get_sub_field('reason_percentage');
+				    	$diff = 100-$num;
+				        ?>
+
+				        	<div class="bar">
+								<p><?php the_sub_field('reason_text'); ?></p>
+								<div class="tell_me"><a data-tooltip-content="#tooltip_<?= $reasonCtr ?>">Tell Me More</a></div>
+								<div class="bar_bg"><div class="bar_fg off" style="left:-<?= $diff ?>%;"></div>
+								<span class="tooltip_data" id="tooltip_<?= $reasonCtr ?>"><?php the_sub_field('reason_info'); ?></span>
+							</div>
+
+				        <?php
+				        $reasonCtr++;
+
+				    endwhile;
+
+				else :
+
+				    // no rows found
+
+				endif;
+
+				?>
+				
+				
 			</div>
 		</div>
 	</div>

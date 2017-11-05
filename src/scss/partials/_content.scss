@@ -129,7 +129,7 @@ body.how-we-can-help .content_page{
 		}
 
 		h2{
-			margin:20px 0px;
+			margin:10px 0px;
 			font-size:52px;
 			color:$dark-blue;
 			@include raleway();
@@ -144,6 +144,7 @@ body.how-we-can-help .content_page{
 			@include droid();
 			color:$dark-gray;
 			font-weight:400;
+			margin:10px 0px;
 
 			@media screen and (max-width:$landscape){
 				font-size:18px;
@@ -274,6 +275,10 @@ body.how-we-can-help .content_page{
 			.img{
 				position:relative;
 				margin-top:-60px;
+				width: 100%;
+				padding-bottom: 63%;
+				background-size:cover;
+				background-repeat:no-repeat;
 
 				@media screen and (max-width:$sub-portrait){
 					margin-top: 10px;
@@ -393,6 +398,10 @@ body.how-we-can-help .content_page{
 					position:relative;
 					margin-top:20px;
 
+					.tooltip_data{
+						display: none;
+					}
+					
 					p{
 						margin:4px 0px 10px;
 						color:$black;
@@ -434,10 +443,15 @@ body.how-we-can-help .content_page{
 						right:0px;
 
 						a{
+							cursor: pointer;
 							text-transform:uppercase;
 							color:$gray;
 							@include raleway();
 							font-weight:600;
+
+							&:hover{
+								color:$dark-blue;
+							}
 
 							@media screen and (max-width:$large){
 								font-size:14px;

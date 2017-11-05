@@ -14,9 +14,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?= get_the_post_thumbnail_url() ?>">
-			</div>
+			<div class="img" style="background-image: url('<?= get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?>');"></div>
 			<h3><?php the_title(); ?></h3>
 			<?= get_field('intro_text') ?>
 			<div class="cta">

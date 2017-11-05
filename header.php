@@ -25,6 +25,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/main.css'; ?>">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url') . '/assets/styles/lity.min.css'; ?>">
+	<link href="<?php echo bloginfo('template_url'); ?>/assets/tooltipster/tooltipster.bundle.min.css" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <?php

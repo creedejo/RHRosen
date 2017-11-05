@@ -9,9 +9,7 @@
 
 <section class="content_page__intro down-scroll margin-bottom">
 	<div class="container">
-		<h3>It’s not like us to withold support for your success.</h3>
-		<h2>Our resources can help you reframe pressing challenges... now.</h2>
-		<h3>That’s why we’re here</h3>
+		<?php the_field('intro_text'); ?>
 		<div class="content_page__down init"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 	</div>
 </section>
@@ -51,9 +49,7 @@
 	?>
 
 		<a href="<?= get_the_permalink(); ?>" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?= get_the_post_thumbnail_url(); ?>">
-			</div>
+			<div class="img" style="background-image: url('<?= get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?>');"></div>
 			<h3><?php the_title(); ?></h3>
 			<?= get_field("intro_text"); ?>
 			<div class="cta">
@@ -107,8 +103,7 @@
 	<div class="container">
 	<h2 class="box-header"><i class="el el-mic"></i>The Podcast</h2>
 		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/pc_1.png">
+			<div class="img" style="background-image:url('<?php echo bloginfo('template_url'); ?>/assets/images/resources/pc_1.png');">
 			</div>
 			<h3>Arriving at Greener Pastures</h3>
 			<p>The industry is changing in a fundamental way, and it’s not changing back. So don’t blame the internet or stupid competitors.</p>
@@ -117,8 +112,7 @@
 			</div>
 		</a>
 		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/pc_2.png">
+			<div class="img" style="background-image:url('<?php echo bloginfo('template_url'); ?>/assets/images/resources/pc_2.png');">
 			</div>
 			<h3>Don’t Be Fooled by Busy-ness</h3>
 			<p>You’re not seeking some cosmic secret. Just choose the right things to focus on, and be careful  who you listen to.</p>
@@ -127,8 +121,7 @@
 			</div>
 		</a>
 		<a href="#" class="content_page__boxes__box">
-			<div class="img">
-				<img src="<?php echo bloginfo('template_url'); ?>/assets/images/resources/pc_3.png">
+			<div class="img" style="background-image:url('<?php echo bloginfo('template_url'); ?>/assets/images/resources/pc_3.png');">
 			</div>
 			<h3>The Glacial Forces at Work in Our Industry</h3>
 			<p>Profit-leading CEOs don’t have any unique secrets. They’re just doing a better job of focusing on what really matters.</p>
