@@ -10,6 +10,20 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 add_theme_support( 'post-thumbnails' );
 add_post_type_support( 'page', 'excerpt' );
 
+
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page(array(
+        'page_title'    => 'Theme General Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+    
+}
+
 function create_hwch_posttype() {
 
     register_post_type( 'hwch',
@@ -30,6 +44,27 @@ function create_hwch_posttype() {
 }
 
 add_action( 'init', 'create_hwch_posttype' );
+
+function create_podcast_posttype() {
+
+    register_post_type( 'podcast_preview',
+    array(
+        'labels' => array(
+            'name'          =>  'Podcast Preview',
+            'singular_name' =>  'Post',
+            'menu_name'     =>  'Podcasts',
+            'all_items'     =>  'All Podcasts',
+            'add_new'       =>  'Add Podcst',
+            'add_new_item'  =>  'Add Podcast'
+            ),
+        'public'    => true,
+        'show_in_admin_bar' =>  true,
+        'supports' => array( 'title', 'editor','thumbnail')
+        )
+    );
+}
+
+add_action( 'init', 'create_podcast_posttype' );
 
 function create_case_study_posttype() {
 

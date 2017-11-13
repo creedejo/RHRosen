@@ -273,6 +273,31 @@
 		background-color:$light-gray;
 		height:400px;
 
+		.tp-leftarrow{
+			margin-left:0px !important;
+
+			@media screen and (max-width:$nav-break){
+				margin-left:60px !important;
+			}
+		}
+
+		.tp-rightarrow{
+			//right:0%;
+			right:40px !important;
+
+			@media screen and (max-width:$nav-break){
+				right:-3% !important;
+			}
+
+			@media screen and (max-width:$mobile){
+				right:-14% !important;
+			}
+
+			@media screen and (max-width:$phone){
+				right:-26% !important;
+			}
+		}
+
 		@media screen and (max-width:$medium){
 			height:320px;
 		}

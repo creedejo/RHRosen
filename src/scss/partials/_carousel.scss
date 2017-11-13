@@ -30,7 +30,8 @@
 
 	&.tp-rightarrow{
 		left:auto !important;
-		right:0%;
+		//right:0%;
+		right:120px;
 
 		@media screen and (max-width:$nav-break){
 			right:-3% !important;
@@ -46,7 +47,8 @@
 	}
 
 	&.tp-leftarrow{
-		left:0% !important;
+		//left:0% !important;
+		left:120px !important;
 		margin-left:60px;
 
 		@media screen and (max-width:$nav-break){

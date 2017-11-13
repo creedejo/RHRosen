@@ -73,6 +73,7 @@
 	?>
 
 	</div>
+	<div class="content_page__down"><a href="#intro"><i class="el el-chevron-down"></i></a></div>
 
 </section>
 

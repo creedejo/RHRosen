@@ -49,7 +49,7 @@
 		</div>
 		<div class="content_page__reasons__bars">
 			<h2>Reasons Clients Turn to Us</h2>
-			<a class="show_me">Show Me</a><span class="arrow_pulse_left"><i class="el el-chevron-left"></i></span>
+			<!-- <a class="show_me">Show Me</a><span class="arrow_pulse_left"><i class="el el-chevron-left"></i></span> -->
 			<div class="content_page__reasons__bars__items">
 
 				<?php
@@ -63,7 +63,7 @@
 				    	$diff = 100-$num;
 				        ?>
 
-				        	<div class="bar">
+				        	<div id="bar_<?= $reasonCtr ?>" class="bar">
 								<p><?php the_sub_field('reason_text'); ?></p>
 								<div class="tell_me"><a data-tooltip-content="#tooltip_<?= $reasonCtr ?>">Tell Me More</a></div>
 								<div class="bar_bg"><div class="bar_fg off" style="left:-<?= $diff ?>%;"></div>

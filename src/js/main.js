@@ -14,8 +14,32 @@
 
 		$('.tell_me a').tooltipster({
 			trigger: 'click',
-			maxWidth: 296
+			maxWidth: 450,
+			side: ['top'],
+			functionPosition: function(instance, helper, position){
+		        //position.coord.top += 100;
+		        //alert(window.innerWidth);
+
+		        var w = window.innerWidth;
+		        if(w>=1400){
+		        	position.coord.left -= 160;
+		        }
+		        else if(w>=1050){
+		        	position.coord.left -= 100;
+		        }
+		        else if(w>=550){
+		        	position.coord.left -= 60;
+		        }
+		   
+		        return position;
+		    }
 		});
+
+		if($("body").hasClass("resources") || $("body").hasClass("hwch")){
+			var $hero = $(".hero__title").eq(0);
+			
+			 $page.animate({scrollTop:$hero.offset().top-100},600);
+		}
 
 		if(window.location.hash) {
 		  var section_to_scroll = "section_"+window.location.hash.substr(1);
@@ -64,6 +88,15 @@
 		    if(!$counter.hasClass('counting')){
 		    	startCounter($counter);
 		    }
+		  },
+		  context: '.page_container',
+		  offset: '100%'
+		});
+
+		/* TRIGGER STATS COUNTER */
+		var waypoints2 = $('#bar_3').waypoint({
+		  handler: function() {
+		    $(".bar_fg").removeClass("off");
 		  },
 		  context: '.page_container',
 		  offset: '100%'
@@ -135,6 +168,10 @@
 
 			console.log("CURRENT: " + currTop);
 			console.log("TARGET: " + newTop);
+//alert($target);
+			if($(this).attr("href")=='#the_book'){
+				newTop-=20;
+			}
 
 			$page.animate({scrollTop:newTop+currTop},1000);
 
@@ -203,6 +240,8 @@
 		  },{context: '.page_container'});
 		});
 		*/
+
+
 
 		$("#blog_filters_mobile").select2();
 		$("#blog_filters_mobile").on('change',function(e){

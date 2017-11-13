@@ -51,8 +51,10 @@
 		<div class="col right">
 			<div class="hwch__title" style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');">
 				<div class="post_title_overlay"></div>
-				<h1><?php the_title(); ?></h1>
-				<p class="subtitle"><?= get_field('subtitle') ?></p>
+				<div class="post_title_content">
+					<h1><?php the_title(); ?></h1>
+					<p class="subtitle"><?= get_field('subtitle') ?></p>
+				</div>
 			</div>
 			<?php the_content() ?>
 		</div>

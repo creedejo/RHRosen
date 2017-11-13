@@ -2,12 +2,24 @@ body.how-we-can-help .content_page{
 	padding-bottom:0px;
 }
 
+body.resources .content_page{
+	padding-bottom:60px;
+}
+
 .content_page{
+
+	&.hwch{
+		padding-bottom:60px;
+	}
 
 	&__down{
 
 		&.top-margin{
 			margin-top:50px;
+		}
+
+		&.top-margin-neg{
+			margin-top:-20px;
 		}
 
 
@@ -61,7 +73,7 @@ body.how-we-can-help .content_page{
 			line-height:26px;
 		}
 	}
-	padding-bottom:60px;
+	//padding-bottom:60px;
 
 	h2{
 		.el-book{
@@ -221,7 +233,7 @@ body.how-we-can-help .content_page{
 			width:30%;
 			background:#FFF;
 			//height:510px;
-			height:480px;
+			height:440px;
 			vertical-align:top;
 			text-decoration: none;
 
@@ -445,12 +457,12 @@ body.how-we-can-help .content_page{
 						a{
 							cursor: pointer;
 							text-transform:uppercase;
-							color:$gray;
+							color:$dark-blue;
 							@include raleway();
 							font-weight:600;
 
 							&:hover{
-								color:$dark-blue;
+								color:$gray;
 							}
 
 							@media screen and (max-width:$large){
@@ -542,7 +554,8 @@ body.how-we-can-help .content_page{
 			display: inline-block;
 			width:30%;
 			margin:0 1% 20px;
-			padding-bottom:50px;
+			//padding-bottom:50px;
+			padding-bottom:20px;
 			vertical-align: top;
 			min-height:560px;
 			text-decoration: none;
@@ -614,7 +627,7 @@ body.how-we-can-help .content_page{
 			a.read_more,span.read_more{
 				position:absolute;
 				left:0px;
-				bottom:10px;
+				bottom:0px;
 			}
 
 			&:hover{
@@ -629,6 +642,31 @@ body.how-we-can-help .content_page{
 	&__carousel{
 		background:$light-gray;
 		margin-top:60px;
+
+		.tp-leftarrow{
+			margin-left:0px !important;
+
+			@media screen and (max-width:$nav-break){
+				margin-left:60px !important;
+			}
+		}
+
+		.tp-rightarrow{
+			//right:0%;
+			right:40px !important;
+
+			@media screen and (max-width:$nav-break){
+				right:-3% !important;
+			}
+
+			@media screen and (max-width:$mobile){
+				right:-14% !important;
+			}
+
+			@media screen and (max-width:$phone){
+				right:-26% !important;
+			}
+		}
 
 		.tp-bullets.custom{
 			width:220px !important;
@@ -827,7 +865,7 @@ body.how-we-can-help .content_page{
 		.container{
 			position:relative;
 			text-align:center;
-			margin-top: 70px;
+			margin-top: 50px;
 		}
 
 		.bg-bar{
@@ -865,6 +903,13 @@ body.how-we-can-help .content_page{
 			}
 		}
 	}
+}
+
+.post_title_content{
+	width:90%;
+	position: absolute;
+	top: 20px;
+	left: 20px;
 }
 
 .post_title_overlay{
@@ -911,3 +956,34 @@ body.how-we-can-help .content_page{
 
 	}
 }
+
+
+body.your-business .tooltipster-sidetip .tooltipster-box{
+	background:$light-gray;
+	border:1px solid #CCC;
+	@include shadow(10px 10px 21px -10px rgba(0,0,0,0.3));
+
+	p{
+		font-size:15px;
+		color:$dark-blue;
+	}
+}
+
+body.your-business .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border{
+	border-top-color:#CCC;
+	border-width:8px;
+	left:2px;
+	top:1px;
+}
+
+body.your-business .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background{
+	    border-top-color: $light-gray;
+}
+
+body.your-business .tooltipster-fade.tooltipster-show{
+	//width:100% !important;
+	//max-width:450px !important;
+}
+
+
+

@@ -36,7 +36,7 @@
 		</div>
 
 	</div>
-	<div class="content_page__down top-margin"><a href="#intro" data-target="#stats"><i class="el el-chevron-down"></i></a></div>
+	<div class="content_page__down top-margin-neg"><a href="#intro" data-target="#stats"><i class="el el-chevron-down"></i></a></div>
 </section>
 
 <section id="stats" class="home__stats">

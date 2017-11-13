@@ -24,28 +24,35 @@
 <section class="footer__links">
 	<div class="container">
 		<div class="footer__links__col">
-			<h3>About Us:</h3>
-			<p>
-				R.H. Rosen Associates, Inc. is a consulting firm that specializes solely in the graphic arts industry. Since 1987, we’ve advised the top management of more than 600 graphic arts companies.
-			</p>
+			<?= get_field('footer_content','option') ?>
 		</div>
 		<div class="footer__links__col">
 			<h3>Services:</h3>
 			<ul>
-				<li><a href="<?= get_site_url() ?>/hwch/exploring-alternatives/">Exploring Alternatives</a></li>
-				<li><a href="<?= get_site_url() ?>/hwch/opportunity-audit/">Opportunity Audits</a></li>
-				<li><a href="<?= get_site_url() ?>/hwch/sales-marketing/">Sales &amp; Marketing</a></li>
-				<li><a href="<?= get_site_url() ?>/hwch/profit-improvement/">Profit Improvement</a></li>
-				<li><a href="<?= get_site_url() ?>/hwch/improving-competitiveness/">Competetive Review</a></li>
-				<li><a href="<?= get_site_url() ?>/hwch/mergers-acquisitions/">Mergers &amp; Acquisitions</a></li>
+				<?php
+
+				$ser = get_posts(array('post_type'=>'hwch','posts_per_page'=>6));
+				foreach($ser as $s):
+				?>
+				<li><a href="<?= get_the_permalink($s->ID) ?>"><?= $s->post_title ?></a></li>
+				<?php
+				endforeach;
+				?>
 			</ul>
 		</div>
 		<div class="footer__links__col">
 			<h3>Recent Podcasts:</h3>
 			<ul class="arrow">
-				<li><a href="#">Getting to Greener Pastures</a></li>
-				<li><a href="#">The CEO’s 7 Deadly Sins</a></li>
-				<li><a href="#">Don’t Be Fooled by  Busy-ness</a></li>
+				<?php
+				$podcasts = wp_get_recent_posts( array('post_type'=>'podcast_preview','posts_per_page'=>3));
+
+				foreach($podcasts as $pc):
+					$theID = $pc["ID"];
+				?>
+				<li><a href="<?= get_field('podcast_url','option') ?>"><?= get_the_title($theID) ?></a></li>
+					<?php
+				endforeach;
+				?>
 			</ul>
 			<!--
 			<div class="footer__links__form">
@@ -57,19 +64,25 @@
 			-->
 
 			<div class="footer__links__button">
-				<a href="#">Explore Our Podcasts</a>
+				<a href="<?= get_field('podcast_url','option') ?>" target="_blank">Explore Our Podcasts</a>
 			</div>
 
 		</div>
 		<div class="footer__links__col">
 			<h3>Recent Blog Posts:</h3>
 			<ul class="arrow">
-				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
-				<li><a href="#">The Owl and the Centipede... A Cautionary Tale for Printers</a></li>
+				<?php
+				$blog = wp_get_recent_posts( array('post_type'=>'post','posts_per_page'=>2));
+				foreach($blog as $b):
+				?>
+				<li><a href="<?= get_the_permalink($b["ID"]) ?>"><?= get_the_title($b['ID']) ?></a></li>
+				<?php
+				endforeach;
+				?>
 			</ul>
 
 			<div class="footer__links__button">
-				<a href="#">Explore Our Blog</a>
+				<a href="<?= get_site_url() ?>/blog">Explore Our Blog</a>
 			</div>
 		</div>
 	</div>
