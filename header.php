@@ -75,8 +75,8 @@
 
 			<div class="search_container">
 				<div class="search_wrapper">
-					<form>
-					<input type="text" id="search" name="search" placeholder="Search" />
+					<form role="search" action="<?php echo site_url('/'); ?>" method="get">
+					<input type="text" id="search" name="s" placeholder="Search" />
 					<button type="submit"></button>
 					</form>
 				</div>

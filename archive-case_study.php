@@ -13,14 +13,14 @@
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div class="content_page__boxes__box">
+		<a href="<?= get_the_permalink(); ?>" class="content_page__boxes__box">
 			<div class="img" style="background-image: url('<?= get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?>');"></div>
 			<h3><?php the_title(); ?></h3>
 			<?= get_field('intro_text') ?>
 			<div class="cta">
-				<a href="<?php the_permalink(); ?>" class="read_more">Read More</a>
+				<span class="read_more">Read More</span>
 			</div>
-		</div>
+		</a>
 
 
 		<?php endwhile; ?>

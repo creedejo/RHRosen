@@ -3,7 +3,9 @@
 //check for thumbnail override
 //$featured_img = get_the_post_thumbnail_url();
 $post_type = get_post_type();
-
+if(is_search()){
+	$post_type = 'search';
+}
 switch($post_type){
 	case "case_study":
 		$pg =  get_page_by_title( 'Resources' );
@@ -22,6 +24,12 @@ switch($post_type){
 		$pid = $pg->ID;
 		$pgTitle = 'The Rosen Blog';
 		$featured_img = get_the_post_thumbnail_url($pid);
+	break;
+	case "search":
+		$pg =  get_page_by_title( 'The Rosen Blog' );
+		$pid = $pg->ID;
+		$pgTitle = 'Search Results';
+		$featured_img = get_field('search_page_hero_image','option')['url'];
 	break;
 
 	default:

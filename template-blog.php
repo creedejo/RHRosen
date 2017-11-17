@@ -87,6 +87,10 @@
 		<?php
 		endwhile;
 		wp_reset_postdata();
+		else:
+			?>
+			<h2>No results were found.  Please try again.</h2>
+			<?php
 		endif;
 		?>
 
