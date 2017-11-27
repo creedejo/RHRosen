@@ -20,9 +20,11 @@ switch($post_type){
 		$featured_img = get_the_post_thumbnail_url($pid);
 	break;
 	case "post":
-		$pg =  get_page_by_title( 'The Rosen Blog' );
-		$pid = $pg->ID;
-		$pgTitle = 'The Rosen Blog';
+		//$pg =  get_page_by_title( 'The Rosen Blog' );
+		//$pid = $pg->ID;
+		$pid=123;
+		//$pgTitle = 'The Rosen Blog';
+		$pgTitle = get_the_title($pid);
 		$featured_img = get_the_post_thumbnail_url($pid);
 	break;
 	case "search":
