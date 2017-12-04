@@ -132,8 +132,11 @@
 		<textarea placeholder="Message..."></textarea>
 		<button type="submit">Send Message</button>
 		-->
-
+		<span class="contact-info">
+		Telephone: (917) 863-5302<br>
+		Email: <a href="mailtop:RRosen@rhrosen.com">RRosen@rhrosen.com</a>
 		<div class="inquiry__close"><i class="el el-remove"></i></div>
+		</span>
 		
 	</div>
 </div>

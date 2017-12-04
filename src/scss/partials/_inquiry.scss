@@ -152,14 +152,19 @@
 	}
 }
 
+span.contact-info{
+	@include raleway();
+	font-size:12px;
+}
+
 .wpcf7-not-valid-tip{
-	@include raleway;
+	@include raleway();
 	font-size:11px !important;
 	margin-top:2px;
 }
 
 .wpcf7-response-output{
-	@include raleway;
+	@include raleway();
 	font-size:11px !important;
 	border:none !important;
 	margin:10px 0px !important;

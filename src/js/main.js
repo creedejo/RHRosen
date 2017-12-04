@@ -136,7 +136,7 @@
 			$inquiry.toggleClass("open");
 		});
 
-		$(".inquiry-link").on('touchstart click',function(e){
+		$(".inquiry-link,.btn_talk").on('touchstart click',function(e){
 			e.preventDefault();
 			e.stopPropagation();
 			openInquiry();

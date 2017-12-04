@@ -69,3 +69,88 @@ form.sub_form{
 	}
 			
 }
+
+span.section_form{
+
+	span.ajax-loader{
+		display: none;
+	}
+
+	input,button{
+		outline: none;
+	}
+
+	input[type='email']{
+		@include raleway();
+		color:$dark-blue;
+		font-size:16px;
+		padding: 10px 20px;
+		border:2px solid $dark-blue;
+		max-width:200px;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $dark-blue;
+	  text-transform: uppercase;
+	  font-weight:600;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: $dark-blue;
+	  text-transform: uppercase;
+	  font-weight:600;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: $dark-blue;
+	  text-transform: uppercase;
+	  font-weight:600;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: $dark-blue;
+	  text-transform: uppercase;
+	  font-weight:600;
+	}
+
+	button{
+		    @include border-radius(0px);
+		    border-top: 2px solid $dark-blue;
+		    border-right: 2px solid $dark-blue;
+		    border-bottom: 2px solid $dark-blue;
+		    border-left: none;
+		    height: 40px;
+		    font-size: 0px;
+		    line-height: 0px;
+		    background-color:$dark-blue;
+		    display: inline-block;
+		    position:relative;
+		    vertical-align: top;
+		    padding: 20px 19px 19px;
+		    cursor: pointer;
+		    @include transition(all .2s linear);
+
+		    &:after{
+		    	content: '\f127';
+		    	position:absolute;
+		    	left:50%;
+		    	top:50%;
+		    	@include transform(translate(-50%,-50%));
+		    	font-family: "Elusive-Icons";
+		    	color:$white;
+		    	font-size:16px;
+		    }
+
+		    &:hover{
+		    	background-color:$dark-gray;
+		    	&:after{
+		    		//color:$dark-blue;
+		    	}
+		    }
+	}
+
+	.wpcf7-not-valid-tip{
+		display: none;
+		position:absolute;
+		height:0px;
+		width:0px;
+		opacity:0;
+	}
+}

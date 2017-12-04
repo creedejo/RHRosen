@@ -44,7 +44,7 @@
 				<p>We get it. Sometimes change can't wait. In fact, you shouldn't have to wait for change either.</p>
 				<p>Send us an email and tell us about your challenges. We’ll get back to you within 24 hours... promise.</p>
 				<p class="center">
-					<a href="#" class="btn_white small">Contact Us</a>
+					<a href="#" class="btn_white small btn_talk">Contact Us</a>
 				</p>
 			</div>
 		</div>

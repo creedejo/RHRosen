@@ -139,7 +139,10 @@
 	<div class="container">
 	<div class="bg-bar"></div>
 	<div class="sep-content">
-		<a href="<?= get_field('book_url','option') ?>" target="_blank" class="read_more">Order the Book</a>
+		<span class="section_form">
+		<?php echo do_shortcode( '[contact-form-7 id="217" title="Book Signup"]') ?>
+		</span>
+		<!-- <a href="<?= get_field('book_url','option') ?>" target="_blank" class="read_more">Order the Book</a> -->
 	</div>
 	</div>
 	<div class="content_page__down init"><a href="#intro"><i class="el el-chevron-down"></i></a></div>

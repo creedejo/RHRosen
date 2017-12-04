@@ -48,7 +48,7 @@
 
 	&.tp-leftarrow{
 		//left:0% !important;
-		left:120px !important;
+		left:100px !important;
 		margin-left:60px;
 
 		@media screen and (max-width:$nav-break){
@@ -65,15 +65,20 @@
 	}
 
 	&:before{
+		display: none;
+		/*
 		position:absolute;
 	    content:'' !important;
 	    height: 60px;
 	    width: 30px;
 	    background-color: $dark-blue;
 	    @include transition(all 300ms linear 0ms);
+	    */
 	}
 
 	&:after{
+
+		/*
 	    background-repeat: no-repeat;
 	    background-position: center;
 	    height: 60px;
@@ -82,6 +87,7 @@
 	    top: 0;
 	    content: "" !important;
 	    z-index: 0;
+	    */
 	}
 
 	&:hover{
@@ -96,11 +102,18 @@
 
 	&:before{
 		left:0px;
+		display: none !important;
 	}
 
 	&:after{
-		background-image: url('../images/carousel_arrow_left.png');
-		left:0px;
+		//background-image: url('../images/carousel_arrow_left.png');
+		right:0px;
+		position:absolute;
+		top:50%;
+		font-family:"Elusive-Icons" !important;
+		content:'\f12e' !important;
+		color:$white ;
+		font-size:34px !important;
 	}
 }
 
@@ -108,11 +121,18 @@
 
 	&:before{
 		right:0px;
+		display: none !important;
 	}
 
 	&:after{
-		background-image: url('../images/carousel_arrow_right.png');
+		//background-image: url('../images/carousel_arrow_right.png');
 		right:0px;
+		position:absolute;
+		top:50%;
+		font-family:"Elusive-Icons" !important;
+		content:'\f12f' !important;
+		color:$white ;
+		font-size:34px !important;
 	}
 }
 
