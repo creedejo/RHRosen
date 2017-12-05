@@ -25,10 +25,13 @@
 	<div class="container">
 		<div class="footer__links__col">
 			<?= get_field('footer_content','option') ?>
+			<ul class="arrow">
+				<li><a class="lnk_bold" href="<?= get_site_url() ?>/resources/#about_bob">About Bob Rosen</a></li>
+			</ul>
 		</div>
 		<div class="footer__links__col">
 			<h3>Services:</h3>
-			<ul>
+			<ul class="arrow">
 				<?php
 
 				$ser = get_posts(array('post_type'=>'hwch','posts_per_page'=>6));
@@ -40,6 +43,7 @@
 				?>
 			</ul>
 		</div>
+		<!--
 		<div class="footer__links__col">
 			<h3>Recent Podcasts:</h3>
 			<ul class="arrow">
@@ -54,20 +58,13 @@
 				endforeach;
 				?>
 			</ul>
-			<!--
-			<div class="footer__links__form">
-				<form class="sub_form">
-					<input type="email" id="sub_email" name="sub_email" placeholder="Subscribe to our Podcast">
-					<button><i class="el el-chevron-right"></i></button>
-				</form>
-			</div>
-			-->
 
 			<div class="footer__links__button">
 				<a href="<?= get_field('podcast_url','option') ?>" target="_blank">Explore Our Podcasts</a>
 			</div>
 
 		</div>
+	-->
 		<div class="footer__links__col">
 			<h3>Recent Blog Posts:</h3>
 			<ul class="arrow">

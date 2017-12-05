@@ -209,6 +209,10 @@ body.resources .content_page{
 					padding-top:20px;
 					margin-bottom:0px;
 					padding-bottom:0px;
+
+					&.blog_header{
+						padding-bottom:40px;
+					}
 				}
 
 				svg{
@@ -348,6 +352,93 @@ body.resources .content_page{
 				left:0px;
 			}
 
+		}
+
+		&#section_about_bob{
+			.container{
+				background-color:$white;
+				padding:0px 60px;
+				@include clear;
+				@media screen and (max-width:$sub-portrait){
+					width:95%;
+					max-width:100%;
+					padding:40px 5% 20px;
+				}
+			}
+		}
+
+		&.pc_temp{
+			.container{
+				padding:60px;
+				@include clear;
+				@media screen and (max-width:$sub-portrait){
+					width:95%;
+					max-width:100%;
+					padding:40px 5% 20px;
+				}
+
+				.pc_col{
+					position:relative;
+					display: block;
+					float:left;
+					@media screen and (max-width:$sub-portrait){
+						float:none;
+					}
+
+					&:first-child{
+						width:35%;
+						img{
+							display: block;
+							width:100%;
+							margin:auto;
+							@media screen and (max-width:$sub-portrait){
+								width:auto;
+								max-width:100%;
+							}
+						}
+
+						@media screen and (max-width:$sub-portrait){
+							width:100%;
+						}
+					}
+
+					&:last-child{
+						width:60%;
+						margin-left:4%;
+
+						@media screen and (max-width:$sub-portrait){
+							width:100%;
+							margin-left: 0px;
+						}
+					}
+
+					h2.box-header{
+						text-align: left;
+						margin-top:0px;
+					}
+
+					p{
+						font-size:18px;
+						line-height:26px;
+						color:$dark-gray;
+						text-align: left;
+						min-height: 0px !important;
+
+						@media screen and (max-width:$medium){
+							font-size:14px;
+							min-height:110px;
+						}
+
+						@media screen and (max-width:$landscape){
+							font-size:16px;
+						}
+
+						@media screen and (max-width:$mobile){
+							font-size:18px;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -696,8 +787,8 @@ body.resources .content_page{
 
 			li{
 				display: inline-block;
-				padding:10px 3%;
-				border-right:3px solid $dark-gray;
+				padding:4px 2%;
+				border-right:2px solid $dark-gray;
 
 				&:last-child{
 					border-right:none;
@@ -717,11 +808,11 @@ body.resources .content_page{
 					@include droid();
 					text-decoration: none;
 					color:$dark-blue;
-					font-size:32px;
+					font-size:24px;
 					font-weight:600;
 
 					@media screen and (max-width:$large){
-						font-size:26px;
+						font-size:22px;
 					}
 
 					@media screen and (max-width:$sub-landscape){

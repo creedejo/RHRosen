@@ -136,6 +136,12 @@
 	}
 }
 
+.home__quotes, .content_page__carousel{
+	.tp-leftarrow.custom:after,.tp-rightarrow.custom:after{
+		color:$dark-blue;
+	}
+}
+
 
 
 

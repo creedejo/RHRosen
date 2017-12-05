@@ -44,9 +44,12 @@
 		if(window.location.hash) {
 		  var section_to_scroll = "section_"+window.location.hash.substr(1);
 		  var $section_to_scroll = $("#"+section_to_scroll);
-
+		  var addMore=0;
+		  if(section_to_scroll=='section_about_bob'){
+		  	addMore=80;
+		  }
 		 	if($section_to_scroll.length>0){
-			  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()},600);
+			  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()+addMore},600);
 			}
 
 			if(window.location.hash.substr(1)=="respond" || window.location.hash.substr(1).indexOf('comment')>=0){
