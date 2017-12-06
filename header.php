@@ -62,8 +62,8 @@
 			<div class="nav__icons__media">
 				<ul>
 					<li><a href="<?= get_field('linked_in_url','option') ?>" target="_blank"><i class="el el-linkedin"></i></a></li>
-					<li><a href="<?= get_field('book_url','option') ?>" target="_blank"><i class="el el-book"></i></a></li>
-					<li><a href="<?= get_field('podcast_url','option') ?>" target="_blank"><i class="el el-mic"></i></a></li>
+					<li><a href="<?= get_site_url() ?>/resources#the_book" target="_blank"><i class="el el-book"></i></a></li>
+					<li><a href="<?= get_site_url() ?>/resources#the_podcast" target="_blank"><i class="el el-mic"></i></a></li>
 					<li class="blogger"><a href="<?= get_site_url() ?>/blog">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26">
 

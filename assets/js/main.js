@@ -35,7 +35,7 @@
 		    }
 		});
 
-		if($("body").hasClass("resources") || $("body").hasClass("hwch")){
+		if(($("body").hasClass("resources") && !window.location.hash) || $("body").hasClass("hwch")){
 			var $hero = $(".hero__title").eq(0);
 			
 			 $page.animate({scrollTop:$hero.offset().top-100},600);
@@ -45,7 +45,7 @@
 		  var section_to_scroll = "section_"+window.location.hash.substr(1);
 		  var $section_to_scroll = $("#"+section_to_scroll);
 		  var addMore=0;
-		  if(section_to_scroll=='section_about_bob'){
+		  if(section_to_scroll=='section_about_bob' || section_to_scroll=='section_the_blog' || section_to_scroll=='section_the_book' || section_to_scroll=='section_the_podcast'){
 		  	addMore=80;
 		  }
 		 	if($section_to_scroll.length>0){

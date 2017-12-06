@@ -82,7 +82,7 @@ function create_case_study_posttype() {
         'show_in_admin_bar' =>  true,
         'supports' => array( 'title', 'editor','thumbnail'),
         'rewrite' => array('slug' => 'case_studies'),
-        'has_archive' => true,
+        //'has_archive' => true,
         'taxonomies'  => array( 'category' )
         )
     );
@@ -119,10 +119,13 @@ function custom_rewrite_rule() {
     add_rewrite_tag('%blogcat%','(.*)');
     add_rewrite_tag('%blogtag%','(.*)');
     add_rewrite_tag('%blogsearch%','(.*)');
+    add_rewrite_tag('%cscat%','(.*)');
 
     add_rewrite_rule('^blog/category/(.*)/?', 'index.php?page_id=123&blogcat=$matches[1]', 'top');
     add_rewrite_rule('^blog/tag/(.*)/?', 'index.php?page_id=123&blogtag=$matches[1]', 'top');
     add_rewrite_rule('^blog/search/(.*)/?', 'index.php?page_id=123&blogsearch=$matches[1]', 'top');
+
+    add_rewrite_rule('^case-studies/category/(.*)/?', 'index.php?page_id=302&cscat=$matches[1]', 'top');
     //add_rewrite_rule('^new_site/blog/category/(.*)/?', 'index.php?page_id=96&blogcat=$matches[1]', 'top');
     //add_rewrite_rule('^new_site/blog/tag/(.*)/?', 'index.php?page_id=96&blogtag=$matches[1]', 'top');
     //add_rewrite_rule('^new_site/blog/search/(.*)/?', 'index.php?page_id=96&blogsearch=$matches[1]', 'top');
