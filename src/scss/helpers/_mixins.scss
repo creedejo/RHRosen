@@ -26,6 +26,14 @@
 	transform: $transforms;
 }
 
+@mixin transformImportant($transforms) {
+	-moz-transform: $transforms !important;
+	-o-transform: $transforms !important;
+	-ms-transform: $transforms !important;
+	-webkit-transform: $transforms !important;
+	transform: $transforms !important;
+}
+
 @mixin shadow($params){
 	-webkit-box-shadow: $params;
 	-moz-box-shadow: $params;

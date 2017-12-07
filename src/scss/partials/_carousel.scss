@@ -7,14 +7,23 @@
 }
 
 .tp-bullets.custom{
-	width:220px !important;
+	width:100% !important;
+	left:0px !important;
+	@include  transformImportant(matrix(1, 0, 0, 1, 0, -48));
 	margin-bottom:20px;
+	text-align:center;
+
+
 
 	.tp-bullet{
 		width:60px;
 		height:8px;
 		background:$carousel-gray;
 		@include border-radius(4px);
+		position:relative;
+		display: inline-block;
+		margin:0px 2px;
+		left:auto!important;
 
 		&.selected{
 			background:$white;

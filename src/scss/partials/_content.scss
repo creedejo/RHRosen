@@ -762,12 +762,19 @@ body.resources .content_page{
 		.tp-bullets.custom{
 			width:220px !important;
 			margin-bottom:20px;
+			text-align: center;
 
 			.tp-bullet{
 				width:60px;
 				height:8px;
 				background:$carousel-gray;
 				@include border-radius(4px);
+
+				position:relative;
+				float:none;
+				left:auto !important;
+				display: inline-block;
+				margin:0px 2px;
 
 				&.selected{
 					background:$dark-blue !important;
