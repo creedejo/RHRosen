@@ -212,3 +212,14 @@
 <?php endif; ?>
 
 <?php get_footer(); ?>
+
+<script>
+	$(document).ready(function(){
+		var $about_lnk = $(".lnk_about_bob");
+		$about_lnk.on('toushstart click',function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$('a.about').click();
+		});
+	});
+</script>

@@ -237,10 +237,19 @@ body.blog{
 	.col-75{
 		width:73%;
 		padding-right:2%;
+
+		@media screen and (max-width:$sub-portrait){
+			width:100%;
+			padding-right:0%;
+		}
 	}
 
 	.col-25{
 		width:25%;
+
+		@media screen and (max-width:$sub-portrait){
+			display: none;
+		}
 	}
 
 	&__img{

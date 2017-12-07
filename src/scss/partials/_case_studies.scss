@@ -116,6 +116,10 @@ section#case_studies{
 				margin:0px;
 				padding:20px;
 				z-index:2;
+
+				@media screen and (max-width:$mobile){
+					font-size:26px;
+				}
 			}
 
 			

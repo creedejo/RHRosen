@@ -49,7 +49,11 @@
 		  	addMore=80;
 		  }
 		 	if($section_to_scroll.length>0){
-			  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()+addMore},600);
+		 		var tts = 600;
+		 		if(section_to_scroll=='section_about_bob'){
+		 			tts=0;
+		 		}
+			  $page.animate({scrollTop:$section_to_scroll.position().top-$(".header").height()+addMore},tts);
 			}
 
 			if(window.location.hash.substr(1)=="respond" || window.location.hash.substr(1).indexOf('comment')>=0){
@@ -252,10 +256,10 @@
 			e.stopPropagation();
 			var val = $(this).val();
 			if(val!="all"){
-				window.location='/new_site/blog/category/'+val;
+				window.location='/blog/category/'+val;
 			}
 			else{
-				window.location='/new_site/blog';
+				window.location='/blog';
 			}
 		});
 
@@ -265,7 +269,7 @@
 			e.stopPropagation();
 			var val = $("#blog_search").val();
 			if(val){
-				window.location = '/new_site/blog/search/'+val;
+				window.location = '/blog/search/'+val;
 			}
 		});
 

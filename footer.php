@@ -26,7 +26,7 @@
 		<div class="footer__links__col">
 			<?= get_field('footer_content','option') ?>
 			<ul class="arrow">
-				<li><a class="lnk_bold" href="<?= get_site_url() ?>/resources/#about_bob">About Bob Rosen</a></li>
+				<li><a class="lnk_bold lnk_about_bob" href="<?= get_site_url() ?>/resources/#about_bob">About Bob Rosen</a></li>
 			</ul>
 		</div>
 		<div class="footer__links__col">

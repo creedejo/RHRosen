@@ -31,7 +31,7 @@
 	&.tp-rightarrow{
 		left:auto !important;
 		//right:0%;
-		right:120px;
+		right:60px;
 
 		@media screen and (max-width:$nav-break){
 			right:-3% !important;
@@ -42,17 +42,18 @@
 		}
 
 		@media screen and (max-width:$phone){
-			right:-26% !important;
+			right:-22% !important;
 		}
 	}
 
 	&.tp-leftarrow{
 		//left:0% !important;
 		left:100px !important;
-		margin-left:60px;
+		margin-left:-6px;
 
 		@media screen and (max-width:$nav-break){
 			left:-3% !important;
+			margin-left:25px;
 		}
 
 		@media screen and (max-width:$mobile){
@@ -60,7 +61,7 @@
 		}
 
 		@media screen and (max-width:$phone){
-			left:-21% !important;
+			left:-22% !important;
 		}
 	}
 
@@ -140,7 +141,15 @@
 	.tp-leftarrow.custom:after,.tp-rightarrow.custom:after{
 		color:$dark-blue;
 	}
+
+	.tp-bullets{
+		@media screen and (max-width:$portrait){
+			top:460px !important;
+		}
+	}
 }
+
+
 
 
 

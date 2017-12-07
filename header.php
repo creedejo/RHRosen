@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110822447-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-110822447-1');
+	</script>
+
 <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -62,8 +72,8 @@
 			<div class="nav__icons__media">
 				<ul>
 					<li><a href="<?= get_field('linked_in_url','option') ?>" target="_blank"><i class="el el-linkedin"></i></a></li>
-					<li><a href="<?= get_site_url() ?>/resources#the_book" target="_blank"><i class="el el-book"></i></a></li>
-					<li><a href="<?= get_site_url() ?>/resources#the_podcast" target="_blank"><i class="el el-mic"></i></a></li>
+					<li><a href="<?= get_site_url() ?>/resources#the_book"><i class="el el-book"></i></a></li>
+					<li><a href="<?= get_site_url() ?>/resources#the_podcast"><i class="el el-mic"></i></a></li>
 					<li class="blogger"><a href="<?= get_site_url() ?>/blog">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26">
 
