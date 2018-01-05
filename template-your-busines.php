@@ -65,7 +65,7 @@
 
 				        	<div id="bar_<?= $reasonCtr ?>" class="bar">
 								<p><?php the_sub_field('reason_text'); ?></p>
-								<div class="tell_me"><a data-tooltip-content="#tooltip_<?= $reasonCtr ?>">Tell Me More</a></div>
+								<div class="tell_me"><a data-reason="<?php the_sub_field('reason_text'); ?>" data-tooltip-content="#tooltip_<?= $reasonCtr ?>" class="reason-link">Tell Me More</a></div>
 								<div class="bar_bg"><div class="bar_fg off" style="left:-<?= $diff ?>%;"></div>
 								<span class="tooltip_data" id="tooltip_<?= $reasonCtr ?>"><?php the_sub_field('reason_info'); ?></span>
 							</div>

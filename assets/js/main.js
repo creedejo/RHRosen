@@ -32,6 +32,15 @@
 		        }
 		   
 		        return position;
+		    },
+		    functionBefore: function(instance,helper){
+		    	var reason = $(helper.origin).data('reason');
+		    	//ga('send', 'event', 'Reasons Clients Turn To Us', 'click', reason);
+		    	gtag('event', 'Reasons Clients Turn To Us', {
+				  'event_category':'engagement',
+				  'event_label': reason
+				});
+		    	//console.log('EVENT: ' + reason);
 		    }
 		});
 
@@ -213,8 +222,7 @@
 				$section = $(this).closest('section').next('section');
 			}
 			
-			console.log("I AM HERE 1b" + $content.offset().top);
-			console.log("I AM HERE 2");
+		
 			var ntop = $section.offset().top-$content.offset().top-$page.offset().top-$(".header").height();
 			$("html,body,.page_container").animate({scrollTop:ntop},600);
 		});
