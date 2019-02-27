@@ -122,7 +122,8 @@
 			$args = array(
 				'post_type'=>'post',
 				'numberposts'=>2,
-				'exclude' => get_the_ID()
+				'exclude' => get_the_ID(),
+				'post_status' => 'publish'
 			);
 			$recent = wp_get_recent_posts($args);
 
