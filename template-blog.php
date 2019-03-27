@@ -11,11 +11,14 @@
 
 
 		global $wp_query;
+		remove_all_filters('posts_orderby');
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 		$args = array(
 			'post_type'=>'post',
 			'posts_per_page' => 6,
-			'paged' => $paged
+			'paged' => $paged,
+			'orderby' => 'date',
+            'order'   => 'DESC'
 		);
 
 
@@ -33,6 +36,8 @@
 			$category="none";
 			$args['s']=$wp_query->query_vars['blogsearch'];
 		}
+
+		//echo '<script>console.log('.json_encode($args).');</script>';
 
 
 ?>
