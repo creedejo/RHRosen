@@ -11,6 +11,11 @@ add_theme_support( 'post-thumbnails' );
 add_post_type_support( 'page', 'excerpt' );
 
 
+function register_nav() {
+register_nav_menus();
+}
+add_action( 'init', 'register_nav' );
+
 if( function_exists('acf_add_options_page') ) {
     
     acf_add_options_page(array(

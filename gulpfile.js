@@ -1,40 +1,41 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-//var minify = require('gulp-minify');
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var sourcemaps = require('gulp-sourcemaps');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var clean = require('gulp-clean');
-var sourcemaps = require('gulp-sourcemaps');
-//var minifyCss = require('gulp-minify-css');
 
-gulp.task('watch',function(){
-	gulp.watch('src/js/**/*.js',['scripts']);
-	gulp.watch('src/scss/**/*.scss',['styles']);
-});
+function style() {
+    return (
+        gulp
+            .src('./src/scss/**/*.scss')
+            .pipe(sourcemaps.init())
+            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest('./assets/styles'))
+    );
+}
 
-gulp.task('scripts',function(){
-	return gulp.src(['./src/js/main.js','./src/js/toggle.js','./src/js/modules/**/*.js','./src/js/vmp_helpers.js'])
-	.pipe(concat('main.js'))
-	.pipe(gulp.dest('./assets/js/'))
-	.pipe(rename('main.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('./assets/js'));
-});
-
-gulp.task('styles',['clean'],function(){
-	gulp.src('./src/scss/**/*.scss')
-	.pipe(sourcemaps.init())
-	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest('./assets/styles'));
-});
-
-gulp.task('clean', function() {
-    gulp.src('./styles/', { read: false })
-        .pipe(clean());
-});
+function scripts(){
+    return (
+        gulp
+            .src(['./src/js/main.js'])
+            .pipe(concat('main.js'))
+            .pipe(gulp.dest('./assets/js/'))
+            .pipe(rename('main.min.js'))
+            .pipe(uglify())
+            .pipe(gulp.dest('./assets/js')
+            )
+    );
+}
 
 
-
-gulp.task('default', ['watch']);
+function watch(){
+    gulp.watch('src/scss/**/*.scss', gulp.series(style));
+    gulp.watch('src/js/**/*.js',gulp.series(scripts));
+}
+ 
+exports.style = style;
+exports.watch = watch;
+exports.scripts = scripts;
+exports.default = watch;

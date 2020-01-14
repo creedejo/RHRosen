@@ -272,13 +272,13 @@
 			}
 		}
 
-		ul.links{
+		ul.menu{
 
 			li{
 				padding:0px 12px;
 				border-right:1px solid $white;
 
-				@media screen and (max-width:$phone){
+				@media screen and (max-width:$mobile){
 					border-right:none;
 					display: block;
 					text-align:center;

@@ -121,7 +121,7 @@
 			<?php
 			$args = array(
 				'post_type'=>'post',
-				'numberposts'=>2,
+				'numberposts'=>5,
 				'exclude' => get_the_ID(),
 				'post_status' => 'publish'
 			);

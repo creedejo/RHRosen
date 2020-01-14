@@ -92,11 +92,24 @@
 			//return true;
 		});
 		
+		/*
 		$("body.home a.navlink_home").addClass("active");
 		$("body.your-business a.navlink_business").addClass("active");
 		$("body.how-we-can-help a.navlink_help").addClass("active");
 		$("body.resources a.navlink_resources").addClass("active");
+		$("body.blog a.navlink_blog").addClass("active");
+		*/
+		var url = window.location;
+		$("#menu-main-nav li a").each(function(i){
+			var $link = $(this);
+			if($link.attr('href')==url){
+				$link.addClass('active active-bold');
+			}
+		});
 
+		if($("body").hasClass('post')){
+			$(".navlink_blog a").addClass('active active-bold');
+		}
 		
 		/* TRIGGER STATS COUNTER */
 		var waypoints = $('#stats').waypoint({
