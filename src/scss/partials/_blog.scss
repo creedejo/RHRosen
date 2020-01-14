@@ -222,6 +222,18 @@ body.blog{
 
 	padding-top:30px;
 
+	&.content{
+
+		h3{
+			margin:18px 0px 16px;
+		}
+
+		p{
+			margin:15px 0px;
+			line-height:22px;
+		}
+	}
+
 	.container:after{
 		content:'';
 		display: block;
