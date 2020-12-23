@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 /*
 function wpdocs_dequeue_script() {
         wp_dequeue_script( 'jquery' ); 
@@ -9,6 +11,10 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
 add_theme_support( 'post-thumbnails' );
 add_post_type_support( 'page', 'excerpt' );
+
+
+/* ================ WP BAKERY ======================= */
+//include('inc/wpbakery.php');
 
 
 function register_nav() {
