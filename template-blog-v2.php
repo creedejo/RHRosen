@@ -1,4 +1,4 @@
-<?php /* Template Name: Blog */ ?>
+<?php /* Template Name: Blog V2 */ ?>
 <?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -9,7 +9,8 @@
 
 <?php
 
-
+$category=false;
+    
 		global $wp_query;
 		remove_all_filters('posts_orderby');
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
@@ -20,7 +21,6 @@
 			'orderby' => 'date',
             'order'   => 'DESC'
 		);
-$category=false;
 
 		if(isset($wp_query->query_vars['blogcat'])){
 			//$searchby = 'category';
@@ -46,11 +46,11 @@ $category=false;
 		<div class="blog_filters">
 			<div class="blog_filters__filters">
 				<ul>
-					<li><a href="<?= get_site_url() ?>/blog" class="<?php if(!$category){echo 'active';} ?>">All Blog Posts</a></li>
-					<li><a href="<?= get_site_url() ?>/blog/category/profit-improvement" class="<?php if($category=='profit-improvement'){echo 'active';} ?>">Profit Improvement</a></li>
-					<li><a href="<?= get_site_url() ?>/blog/category/sales-marketing" class="<?php if($category=='sales-marketing'){echo 'active';} ?>">Sales &amp; Marketing</a></li>
-					<li><a href="<?= get_site_url() ?>/blog/category/exploring-alternatives" class="<?php if($category=='exploring-alternatives'){echo 'active';} ?>">Exploring Alternatives</a></li>
-					<li><a href="<?= get_site_url() ?>/blog/category/mergers-acquisitions" class="<?php if($category=='mergers-acquisitions'){echo 'active';} ?>">Mergers &amp; Acquisitions</a></li>
+					<li><a href="<?= get_site_url() ?>/fresh-thinking" class="<?php if(!$category){echo 'active';} ?>">All Blog Posts</a></li>
+					<li><a href="<?= get_site_url() ?>/fresh-thinking/category/profit-improvement" class="<?php if($category=='profit-improvement'){echo 'active';} ?>">Profit Improvement</a></li>
+					<li><a href="<?= get_site_url() ?>/fresh-thinking/category/sales-marketing" class="<?php if($category=='sales-marketing'){echo 'active';} ?>">Sales &amp; Marketing</a></li>
+					<li><a href="<?= get_site_url() ?>/fresh-thinking/category/exploring-alternatives" class="<?php if($category=='exploring-alternatives'){echo 'active';} ?>">Exploring Alternatives</a></li>
+					<li><a href="<?= get_site_url() ?>/fresh-thinking/category/mergers-acquisitions" class="<?php if($category=='mergers-acquisitions'){echo 'active';} ?>">Mergers &amp; Acquisitions</a></li>
 				</ul>
 				<div class="blog_filters_select">
 					<select id="blog_filters_mobile">

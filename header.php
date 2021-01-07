@@ -43,7 +43,7 @@
 	$post_slug=$post->post_name;
 	$post_type=$post->post_type;
 ?>
-<body class="<?php echo $post_slug; ?> <?= $post_type ?>">
+<body <?php body_class(array($post_slug,$post_type)) ?>>
 
 <div class="header">
 	<div class="container">

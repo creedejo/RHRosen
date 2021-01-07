@@ -136,6 +136,10 @@ function custom_rewrite_rule() {
     add_rewrite_rule('^blog/tag/(.*)/?', 'index.php?page_id=123&blogtag=$matches[1]', 'top');
     add_rewrite_rule('^blog/search/(.*)/?', 'index.php?page_id=123&blogsearch=$matches[1]', 'top');
 
+    add_rewrite_rule('^fresh-thinking/category/(.*)/?', 'index.php?page_id=1733&blogcat=$matches[1]', 'top');
+    add_rewrite_rule('^fresh-thinking/tag/(.*)/?', 'index.php?page_id=1733&blogtag=$matches[1]', 'top');
+    add_rewrite_rule('^fresh-thinking/search/(.*)/?', 'index.php?page_id=1733&blogsearch=$matches[1]', 'top');
+
     add_rewrite_rule('^case-studies/category/(.*)/?', 'index.php?page_id=302&cscat=$matches[1]', 'top');
     //add_rewrite_rule('^new_site/blog/category/(.*)/?', 'index.php?page_id=96&blogcat=$matches[1]', 'top');
     //add_rewrite_rule('^new_site/blog/tag/(.*)/?', 'index.php?page_id=96&blogtag=$matches[1]', 'top');

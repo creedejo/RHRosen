@@ -39,9 +39,34 @@ switch($post_type){
 		$pgTitle = get_the_title();
 }
 
+if(get_field('hero_background_image')){
+	$featured_img = get_field('hero_background_image');
+	
+}
+
+if(get_field('hero_background_image_m')):
+	?>
+	<style>
+		@media screen and (max-width:600px){
+			#page_hero{
+				background-image:url('<?= get_field('hero_background_image_m') ?>') !important;
+			}
+		}
+	</style>
+	<?php
+endif;
+
 ?>
-<section class="hero" style="background-image:url('<?= $featured_img ?>');">
+<section id="page_hero" class="hero" style="background-image:url('<?= $featured_img ?>');">
 	<div class="container">
-		<div class="hero__title"><?= $pgTitle ?></div>
+		<?php
+		$hide_title = false;
+		if(get_field('hide_title_in_hero')){
+			$hide_title = get_field('hide_title_in_hero');
+		}
+		?>
+		<?php if(!$hide_title): ?>
+			<div class="hero__title"><?= $pgTitle ?></div>
+		<?php endif ?>
 	</div>
 </section>
